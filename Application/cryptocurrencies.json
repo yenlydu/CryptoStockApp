@@ -1,0 +1,34 @@
+{
+    "investments":[
+        {
+            "name" : "Bitcoin",
+            "symbol" : "BTC",
+            "variationsPercentage": [
+                {
+                    "oneDay" : 1.51,
+                    "oneWeek" : -12.51
+                }
+            ]
+        },
+        {
+            "name": "Ethereum",
+            "symbol" : "ETH",
+            "variationsPercentage": [
+                {
+                    "oneDay" : 1.51,
+                    "oneWeek" : -12.51
+                }
+            ]
+        },
+        {
+            "name": "Litecoin",
+            "symbol" : "LTC",
+            "variationsPercentage": [
+                {
+                    "oneDay" : 1.51,
+                    "oneWeek" : -12.51
+                }
+            ]
+        }
+    ]
+}
