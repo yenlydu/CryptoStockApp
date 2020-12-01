@@ -5,7 +5,7 @@
             "symbol" : "BTC",
             "variationsPercentage": [
                 {
-                    "oneDay" : 1.51,
+                    "oneDay" :  1,
                     "oneWeek" : -12.51
                 }
             ]
