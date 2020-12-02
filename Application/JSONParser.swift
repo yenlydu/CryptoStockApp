@@ -47,8 +47,12 @@ public class JSONParser {
         do {
             let decodedData = try JSONDecoder().decode(Investments.self,
                                                        from: jsonData)
-            
-            print(decodedData.investments)
+//            print(decodedData.investments[0].)
+
+            let encodedData = try NSKeyedArchiver.archivedData(withRootObject: decodedData.investments, requiringSecureCoding: false)
+
+            let userDefaults = UserDefaults.standard
+            userDefaults.set(encodedData, forKey: "data")
 
             print("===================================")
         } catch {

@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import IOSBasicProject
+@testable import IOSBasic
 
 class IOSBasicProjectTests: XCTestCase {
 

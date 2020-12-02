@@ -10,6 +10,7 @@ import UIKit
 
 
 struct CryptocurrenciesInformation {
+    
     var name:String?
     var symbol:String?
     var euro:Double?
@@ -24,20 +25,16 @@ struct CryptocurrenciesInformation {
 }
 
 
-class MoneyViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class TableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+
+    
     @IBOutlet var tableView: UITableView!
-    var json = JSONParser()
     var cryptocurrenciesArray = [CryptocurrenciesInformation]()
-    
-//    https://www.buybitcoinworldwide.com/france/
-//    https://trading-education.com/what-are-the-5-most-popular-cryptocurrencies-in-the-usa
-    
     override func viewDidLoad() {
-        super.viewDidLoad()
-        title = "Cryptocurrency"
+        title = "Prices"
+
         tableView.delegate = self
         tableView.dataSource = self
-        json.getInvestment()
         let bitcoin = CryptocurrenciesInformation(name: "Bitcoin", symbol: "BTC", euro: 16155.19, usd: 19324.50)
         let ethereum = CryptocurrenciesInformation(name: "Ethereum", symbol: "ETH", euro: 520.72, usd: 622.93)
         let litecoin = CryptocurrenciesInformation(name: "Litecoin", symbol: "LTC", euro: 72.90, usd: 87.21)
@@ -50,18 +47,29 @@ class MoneyViewController: UIViewController, UITableViewDelegate, UITableViewDat
         cryptocurrenciesArray.append(chainlink)
         cryptocurrenciesArray.append(xrp)
         cryptocurrenciesArray.append(bitcoinCash)
+        cryptocurrenciesArray.append(bitcoin)
+        cryptocurrenciesArray.append(ethereum)
+        cryptocurrenciesArray.append(litecoin)
+        cryptocurrenciesArray.append(chainlink)
+        cryptocurrenciesArray.append(xrp)
         cryptocurrenciesArray.append(bitcoinCash)
-        cryptocurrenciesArray.append(bitcoinCash)
-        tableView.keyboardDismissMode = .onDrag
-        
-        tableView.estimatedRowHeight = 250
+        print(cryptocurrenciesArray.count)
+//        tableView.isScrollEnabled = true
         tableView.rowHeight = UITableView.automaticDimension
-
-        
-        self.navigationController?.hidesBarsOnTap = true
+        tableView.estimatedRowHeight = 160
     }
+    
+//    func configureTableView() {
+//        tableView.rowHeight = UITableView.automaticDimension
+//        tableView.estimatedRowHeight = 160.0
+//    }
+//    func scrollToLastRow() {
+//        let indexPath = NSIndexPath(row: cryptocurrenciesArray.count - 1, section: 0)
+//        self.tableView.scrollToRow(at: indexPath as IndexPath, at: .bottom, animated: true)
+//    }
+    
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-         return UITableView.automaticDimension
+        return 10.0
         }
     func tableView(_ tempTableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if (tempTableView == tableView) {
@@ -76,8 +84,8 @@ class MoneyViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        tableView.deselectRow(at: indexPath, animated: true)
-        performSegue(withIdentifier: "cryptoInformations", sender: self)
+        tableView.deselectRow(at: indexPath, animated: true)
+        performSegue(withIdentifier: "displayCryptoInfo", sender: self)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -87,6 +95,7 @@ class MoneyViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCell(withIdentifier: "cell")
         if cell == nil {
+            
             cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
         }
 //        cell.indexpaindexpathForCell = indexPath
@@ -98,14 +107,46 @@ class MoneyViewController: UIViewController, UITableViewDelegate, UITableViewDat
 //        print(cell.setSelected(true, animated: true))
 
         cell?.tag = indexPath.row
-        
+//        tableView.scrollRectToVisible(tableView.rectForRow(at: indexPath),animated: true)
+
         // call the subscribeTapped method when tapped
 
 
         return cell!
     }
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-    }
 
+}
+
+class MoneyViewController: UIViewController {
+    @IBOutlet var tableView: UITableView!
+    var json = JSONParser()
+    var cryptocurrenciesArray = [CryptocurrenciesInformation]()
+    var fetchingmore = false
+
+//    https://www.buybitcoinworldwide.com/france/
+//    https://trading-education.com/what-are-the-5-most-popular-cryptocurrencies-in-the-usa
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        json.getInvestment()
+
+//
+//        let array = UserDefaults.standard.object(forKey:"dataArray")
+//        print(array)
+//        tableView.reloadData()
+//        scrollToBottom()
+
+//        let name = UserDefaults.standard.string(forKey: "dataArray")
+//        print(name)
+//        tableView.setContentOffset(CGPoint(x: 0, y: CGFloat.greatestFiniteMagnitude), animated: false)
+
+//        self.navigationController?.isNavigationBarHidden = false
+        
+
+        
+        //        self.configureTableView()
+//        tableView.reloadData()
+  
+    }
 }

@@ -17,6 +17,8 @@ class ProfileViewController : UIViewController {
         title = "Profile"
         imageView.layer.cornerRadius = 10
         imageView.clipsToBounds = true
+//        imageView.frame = CGRect(x: 0, y: 0, width: 100, height: 200)
+//        revealingSplashView.addSubview(imageView)
 
         // Do any additional setup after loading the view.
     }
