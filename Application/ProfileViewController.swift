@@ -14,7 +14,7 @@ class ProfileViewController : UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Profile"
+        title = "TabBarController.Profile".localized()
         imageView.layer.cornerRadius = 10
         imageView.clipsToBounds = true
 //        imageView.frame = CGRect(x: 0, y: 0, width: 100, height: 200)

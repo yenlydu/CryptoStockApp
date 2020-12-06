@@ -1,0 +1,12 @@
+/*
+  French.strings
+  IOSBasic
+
+  Created by Duong Yen-Ly on 03/12/2020.
+  
+*/
+
+"welcomeTitle" = "Bonjour !";
+"TabBarController.Prices" = "Prix";
+"TabBarController.Profile" = "Profil";
+"TabBarController.Home" = "Accueil";

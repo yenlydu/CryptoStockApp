@@ -1,0 +1,13 @@
+/*
+  english
+  IOSBasic
+
+  Created by Duong Yen-Ly on 03/12/2020.
+  
+*/
+
+
+"welcomeTitle" = "Welcome !";
+"TabBarController.Prices" = "Prices";
+"TabBarController.Profile" = "Profile";
+"TabBarController.Home" = "Home";
