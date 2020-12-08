@@ -30,6 +30,7 @@ struct Prices: Codable {
 struct Cryptocurrency: Codable {
     let name: String
     let symbol: String
+    let icon: String
     let prices: [Prices]
     let variationsPercentage: [Variations]
     let variationsLastWeek: [VariationsLastWeek]

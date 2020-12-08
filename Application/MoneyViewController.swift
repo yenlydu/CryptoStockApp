@@ -28,6 +28,7 @@ class MoneyViewController: UIViewController, UITableViewDelegate, UITableViewDat
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 160
         jsonArray = json.getInvestment()
+
 //        print("click = " + clickedString)
 //        tableView.reloadData()
   
@@ -77,6 +78,8 @@ class MoneyViewController: UIViewController, UITableViewDelegate, UITableViewDat
             
             cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
         }
+        cell?.imageView?.image = UIImage(named: jsonArray[indexPath.row].icon)
+
         cell?.textLabel?.text = jsonArray[indexPath.row].name
         cell?.detailTextLabel?.text = jsonArray[indexPath.row].symbol
         cell?.tag = indexPath.row

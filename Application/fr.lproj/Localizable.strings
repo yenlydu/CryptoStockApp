@@ -11,6 +11,12 @@
 "TabBarController.Profile" = "Profil";
 "TabBarController.Home" = "Accueil";
 "Currency" = "euro";
-"About" = "A propos";
+"About" = "A propos de";
 "About.Bitcoin" = "Première cryptomonnaie mondiale, le bitcoin est stocké et échangé de manière sécurisée sur Internet à l'aide d'un registre numérique appelé blockchain. Les bitcoins sont fractionnables en unités appelées satoshis qui valent chacune 0,00000001 bitcoin.";
 "About.Ethereum" = "Le terme Ethereum est une cryptomonnaie doublée d'une plate-forme informatique décentralisée. Les développeurs peuvent utiliser la plate-forme pour créer des applications décentralisées et émettre de nouveaux crypto-actifs qualifiés de jetons Ethereum.";
+"About.Litecoin" = "Le litecoin est une cryptomonnaie qui utilise un programme de confirmation de paiement plus rapide et un autre algorithme de cryptage que ceux du bitcoin.";
+"About.Tether" = "USDT est un jeton qui s'efforce de suivre le cours du dollar américain. Idéalement, cela signifie qu'1 USDT se négocie en Bourse à une valeur d'1,00 $ USD exactement. Veuillez noter que Coinbase ne prend pas en charge USDT : vous ne devez donc pas en envoyer vers votre compte Bitcoin sur Coinbase.";
+"About.Chainlink" = "Chainlink (LINK) est un jeton Ethereum utilisé par le réseau d'oracles décentralisé Chainlink. Ce réseau permet aux contrats intelligents sur Ethereum de se connecter en toute sécurité à des sources de données externes, à des API et à des systèmes de paiement.";
+"About.BitcoinCash" = "Bitcoin Cash correspond à une modification du protocole Bitcoin destinée à renforcer la capacité de transactions du réseau au quotidien.";
+"About.Polkadot" = "Polkadot est un protocole multichaîne de sharding à code source ouvert qui facilite le transfert interchaîne de tout type de données ou d'actifs, et pas seulement de jetons, rendant ainsi un large éventail de chaînes de blocs interopérables entre elles.";
+"About.BinanceCoin" = "Binance Coin est une cryptomonnaie utilisée pour le règlement de frais sur la plate-forme d'échange de cryptomonnaies Binance. Les frais réglés en Binance Coin sur cette plate-forme bénéficient d'une remise.";

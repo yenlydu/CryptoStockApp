@@ -16,9 +16,11 @@ class CryptoInformations: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("crypto = " + cellClicked)
-        let tempAbout = "About." + cellClicked
-        bitcoinInformation.text = tempAbout.localized()
-        aboutLabel.text = "About".localized()
+        let tempAboutCellClicked = "About." + cellClicked.replacingOccurrences(of: " ", with: "")
+//        let formattedString = cellClicked.replacingOccurrences(of: " ", with: "")
+//        print(formattedString)
+        bitcoinInformation.text = tempAboutCellClicked.localized()
+        aboutLabel.text = "About".localized() + " " + cellClicked
         bitcoinInformation.sizeToFit()
         bitcoinInformation.adjustsFontSizeToFitWidth = true
         bitcoinInformation.minimumScaleFactor = 0.5

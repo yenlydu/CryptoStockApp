@@ -3,6 +3,7 @@
         {
             "name" : "Bitcoin",
             "symbol" : "BTC",
+            "icon" : "bitcoin.png",
             "prices": [
                 {
                     "euro" : 15692.15,
@@ -30,6 +31,7 @@
         {
             "name": "Ethereum",
             "symbol" : "ETH",
+            "icon" : "ethereum.png",
             "prices": [
                 {
                     "euro" : 486.63,
@@ -57,6 +59,7 @@
         {
             "name": "Litecoin",
             "symbol" : "LTC",
+            "icon" : "litecoin.png",
             "prices": [
                 {
                     "euro" : 67.52,
@@ -84,6 +87,7 @@
         {
             "name": "Tether",
             "symbol" : "USTD",
+            "icon" : "tether.png",
             "prices": [
                 {
                     "euro" : 0.825594,
@@ -111,6 +115,7 @@
         {
             "name": "Chainlink",
             "symbol" : "LINK",
+            "icon" : "chainlink.png",
             "prices": [
                 {
                     "euro" : 10.62,
@@ -138,6 +143,7 @@
         {
             "name": "Bitcoin Cash",
             "symbol" : "BTH",
+            "icon" : "bitcoin_cash.png",
             "prices": [
                 {
                     "euro" : 241.82,
@@ -165,6 +171,7 @@
         {
             "name": "Polkadot",
             "symbol" : "DOT",
+            "icon" : "polkadot.png",
             "prices": [
                 {
                     "euro" : 4.56,
@@ -192,6 +199,7 @@
         {
             "name": "Binance Coin",
             "symbol" : "BNB",
+            "icon" : "binance_coin.png",
             "prices": [
                 {
                     "euro" : 25.10,
