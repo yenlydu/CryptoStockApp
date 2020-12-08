@@ -11,3 +11,7 @@
 "TabBarController.Prices" = "Prices";
 "TabBarController.Profile" = "Profile";
 "TabBarController.Home" = "Home";
+"Currency" = "usd";
+"About" = "About";
+"About.Bitcoin" = "Bitcoin is the world's first cryptographic currency and is stored and exchanged securely over the Internet using a digital register called a blockchain. Bitcoins can be split into units called satoshis, each of which is worth 0.00000001 bitcoin.";
+"About.Ethereum" = "The term Ethereum is a combination of a cryptographic system and a decentralised IT platform. Developers can use the platform to create decentralised applications and issue new crypto-actives called Ethereum tokens.";

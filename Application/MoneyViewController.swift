@@ -12,6 +12,7 @@ class MoneyViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     @IBOutlet var tableView: UITableView!
     var json = JSONParser()
+    var cellClicked : String = "nil"
     var jsonArray : [Cryptocurrency] = []
 //    var cryptocurrenciesArray = [CryptocurrenciesInformation]()
     var fetchingmore = false
@@ -27,7 +28,7 @@ class MoneyViewController: UIViewController, UITableViewDelegate, UITableViewDat
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 160
         jsonArray = json.getInvestment()
-        print(jsonArray)
+//        print("click = " + clickedString)
 //        tableView.reloadData()
   
     }
@@ -44,16 +45,32 @@ class MoneyViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
         return 0
     }
+//
+//    private func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+////        print(jsonArray[indexPath.row].name)
+//        clickedString = jsonArray[indexPath.row].name
+//
+//    }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+
+        cellClicked = jsonArray[indexPath.row].name
         performSegue(withIdentifier: "displayCryptoInfo", sender: self)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return jsonArray.count
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "displayCryptoInfo" {
 
+            let vc = segue.destination as! CryptoInformations
+            vc.cellClicked = cellClicked //setting the titleString created from my ToDoListDetailViewController and setting it to contentTitle
+
+        }
+    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCell(withIdentifier: "cell")
         if cell == nil {
