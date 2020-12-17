@@ -9,27 +9,41 @@ import Foundation
 import UIKit
 
 class LanguagePresenter {
+
     weak var view: ChangeLanguagePresenterView?
     @IBOutlet var parametersView: UIPickerView!
+    var dataArray: Array<String> = []
 
     init(with view : ChangeLanguagePresenterView) {
         self.view = view
     }
+    private func splitLanguageLocalized() {
+        dataArray.append("French".localized().components(separatedBy: ",")[0])
+        dataArray.append("English".localized().components(separatedBy: ",")[0])
+        dataArray.append("Dutch".localized().components(separatedBy: ",")[0])
+    }
+
+    func getDataSize() -> Array<String> {
+        return self.dataArray
+    }
     
     func displayLanguage () {
-        view?.changeLanguages()
-//        view?.changeLayout(languages: Languages(english: "English".localized(), french: "French".localized(), dutch: "Dutch".localized()) )
+        splitLanguageLocalized()
+        print(dataArray)
+        view?.addTitle()
     }
 
 }
 
 protocol ChangeLanguagePresenterView: AnyObject {
-    func changeLanguages() 
-//    func changeLayout(languages : Languages)
+    func addTitle()
 }
 
 extension ChangeLanguageViewController: ChangeLanguagePresenterView {
-    func changeLanguages() {
+
+    
+    func addTitle() {
+        
 //        var selection = ""
 //        print(selection.isEmpty)
 //        if (selection.isEmpty) {
@@ -39,8 +53,7 @@ extension ChangeLanguageViewController: ChangeLanguagePresenterView {
 //        }
 //        let splits = "French".localized().components(separatedBy: ",")
 //        print(splits)
-    //        var firstName: String = fullNameArr[0]
+//            var firstName: String = fullNameArr[0]
 
         print(Locale.current.languageCode)
-    }
-}
+    }}
