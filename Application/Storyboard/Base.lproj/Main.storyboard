@@ -236,7 +236,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="oRQ-M6-vjp"/>
                     <connections>
-                        <outlet property="parametersView" destination="82U-3j-ngu" id="fvz-hJ-dmZ"/>
+                        <outlet property="parametersView" destination="82U-3j-ngu" id="GR3-6n-AwE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2CF-BY-YbR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -250,10 +250,35 @@
                     <view key="view" contentMode="scaleToFill" id="MNw-g0-zgr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ycW-KB-1ck">
+                                <rect key="frame" x="240" y="186" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3cS-5a-LKy">
+                                <rect key="frame" x="152" y="398" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pbo-9K-7y2">
+                                <rect key="frame" x="159" y="250" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="jYv-5F-fLU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="a4Z-v4-e2u"/>
+                    <connections>
+                        <outlet property="button" destination="3cS-5a-LKy" id="Idj-c9-fDb"/>
+                        <outlet property="label" destination="ycW-KB-1ck" id="Fnu-ah-b2t"/>
+                        <outlet property="text" destination="pbo-9K-7y2" id="Xb0-2e-BXG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B9K-Kw-PSQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -343,6 +368,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="cn2-kb-hm8" kind="show" id="HOc-i6-5gl"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="qBd-rl-yMx">
                                         <rect key="frame" x="0.0" y="71.5" width="414" height="43.5"/>

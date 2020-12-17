@@ -11,6 +11,7 @@ import UIKit
 class MoneyViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet private weak var tableView: UITableView!
+//    let presenter = MoneyViewPresenter
     var json = JSONParser()
     var cellClicked : String = "nil"
     var jsonArray : [Cryptocurrency] = []
@@ -21,6 +22,7 @@ class MoneyViewController: UIViewController, UITableViewDelegate, UITableViewDat
 //    https://trading-education.com/what-are-the-5-most-popular-cryptocurrencies-in-the-usa
     
     override func viewDidLoad() {
+        
         title = "TabBarController.Prices".localized()
         super.viewDidLoad()
         tableView.delegate = self
@@ -86,6 +88,5 @@ class MoneyViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
         return cell!
     }
-    
-    
 }
+

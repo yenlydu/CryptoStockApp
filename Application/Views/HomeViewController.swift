@@ -8,7 +8,11 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-    let goals = [6, 8, 26, 30, 8, 10]
+    @IBOutlet private weak var label: UILabel!
+    @IBOutlet private weak var text: UITextField!
+    @IBOutlet private weak var button: UIButton!
+    
+    var presenter = HomeViewPresenter(languages: Languages(english: "aze", french: "rty", dutch: "uio"))
 
     override func viewDidLoad() {
         super.viewDidLoad()

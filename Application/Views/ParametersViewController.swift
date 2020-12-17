@@ -14,13 +14,10 @@ class ParametersViewController : UITableViewController {
     
 //    @IBOutlet var parametersTableView: UITableViewCell!
     @IBOutlet var parametersTableView: UITableView!
-    var str = ["Country", "Devise"]
     override func viewDidLoad() {
         super.viewDidLoad()
         self.labelCountry.text = "Country".localized()
         self.labelCurrency.text = "ChangeCurrency".localized()
-//        parametersTableView.delegate = self
-//        parametersTableView.dataSource = self
      }
     
     
