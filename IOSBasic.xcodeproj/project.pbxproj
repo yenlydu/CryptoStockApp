@@ -15,7 +15,6 @@
 		1855A8EA257107E700C508EC /* IOSBasicProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1855A8E9257107E700C508EC /* IOSBasicProjectTests.swift */; };
 		1855A8F5257107E700C508EC /* IOSBasicProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1855A8F4257107E700C508EC /* IOSBasicProjectUITests.swift */; };
 		1855A90625710DA300C508EC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1855A90525710DA300C508EC /* ProfileViewController.swift */; };
-		1855A90B25710E6800C508EC /* BlueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1855A90A25710E6800C508EC /* BlueViewController.swift */; };
 		186742492574378200263972 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186742482574378200263972 /* JSONParser.swift */; };
 		1867424B257437C400263972 /* MoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1867424A257437C400263972 /* MoneyViewController.swift */; };
 		1867424F257438F600263972 /* prices.json in Resources */ = {isa = PBXBuildFile; fileRef = 1867424E257438F600263972 /* prices.json */; };
@@ -60,7 +59,6 @@
 		1855A8F4257107E700C508EC /* IOSBasicProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSBasicProjectUITests.swift; sourceTree = "<group>"; };
 		1855A8F6257107E700C508EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1855A90525710DA300C508EC /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		1855A90A25710E6800C508EC /* BlueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueViewController.swift; sourceTree = "<group>"; };
 		186742482574378200263972 /* JSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 		1867424A257437C400263972 /* MoneyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyViewController.swift; sourceTree = "<group>"; };
 		1867424E257438F600263972 /* prices.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = prices.json; sourceTree = "<group>"; };
@@ -162,7 +160,6 @@
 			isa = PBXGroup;
 			children = (
 				1867424A257437C400263972 /* MoneyViewController.swift */,
-				1855A90A25710E6800C508EC /* BlueViewController.swift */,
 				1855A90525710DA300C508EC /* ProfileViewController.swift */,
 				1850756D25766BCD00AD4E18 /* CryptoInformationsController.swift */,
 				1886D482258A1C00005C7CB0 /* ChangeLanguageViewController.swift */,
@@ -336,7 +333,6 @@
 				186742492574378200263972 /* JSONParser.swift in Sources */,
 				187ED21E25894F600033FC1D /* ParametersViewController.swift in Sources */,
 				1855A90625710DA300C508EC /* ProfileViewController.swift in Sources */,
-				1855A90B25710E6800C508EC /* BlueViewController.swift in Sources */,
 				1867424B257437C400263972 /* MoneyViewController.swift in Sources */,
 				186D29C5257D484200512EA9 /* HomeViewController.swift in Sources */,
 				1855A8D5257107E500C508EC /* SceneDelegate.swift in Sources */,
