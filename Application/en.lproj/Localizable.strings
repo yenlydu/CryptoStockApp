@@ -13,7 +13,7 @@
 "ChangeCurrency" = "Currency";
 "Country" = "Country";
 "Parameters" = "Parameters";
-"welcomeTitle" = "Welcome !";
+"Welcome" = "Welcome !";
 "TabBarController.Prices" = "Prices";
 "TabBarController.Profile" = "Profile";
 "TabBarController.Home" = "Home";

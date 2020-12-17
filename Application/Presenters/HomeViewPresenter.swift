@@ -8,11 +8,24 @@
 import Foundation
 import UIKit
 
+class HomeViewPresenter {
+    var view: HomeView?
+    init(with view: HomeView) {
+        self.view = view
+    }
+    
+    func setTitle() {
+        self.view?.setTitle()
+    }
+}
 
-class HomeViewPresenter{
-    private  var languages: Languages
-    init(languages: Languages) {
-        self.languages = languages
-        print (languages.Dutch, languages.English, languages.French)
+protocol HomeView : AnyObject {
+    func setTitle()
+}
+
+extension HomeViewController: HomeView {
+    func setTitle() {
+        title = "Welcome".localized()
+
     }
 }

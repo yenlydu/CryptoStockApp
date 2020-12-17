@@ -13,7 +13,7 @@
 "ChangeCurrency" = "Munteenheid";
 "Country" = "Land";
 "Parameters" = "Instellingen";
-"welcomeTitle" = "Welkom !";
+"Welcome" = "Welkom !";
 "TabBarController.Prices" = "Prijzen";
 "TabBarController.Profile" = "Profiel";
 "TabBarController.Home" = "huis";

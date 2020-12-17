@@ -9,7 +9,6 @@ import UIKit
 
 class ChangeLanguageViewController : UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     var selectedLanguage: String?
-//    var selection: String = ""
     @IBOutlet var parametersView: UIPickerView!
 
     lazy var presenter = LanguagePresenter(with: self)
@@ -26,15 +25,6 @@ class ChangeLanguageViewController : UIViewController, UIPickerViewDataSource, U
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return self.presenter.getDataSize()[row]
     }
-
-//    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-//
-//        selection = self.presenter.getDataSize()[row]
-//        print ("--")
-//        print ("ligne : ", row)
-//        print ("colonne : ", component)
-//        print ("Fruit : ", selection)
-//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

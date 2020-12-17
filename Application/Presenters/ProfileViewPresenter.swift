@@ -8,4 +8,27 @@
 import UIKit
 
 class ProfileViewPresenter {
+    var view: ProfileView?
+    
+    init(with view: ProfileView) {
+        self.view = view
+    }
+    
+    func imageLayout() {
+        self.view?.imageLayout()
+    }
+}
+
+protocol ProfileView : AnyObject {
+    func imageLayout()
+}
+
+extension ProfileViewController : ProfileView {
+    func imageLayout() {
+        imageView.layer.borderWidth = 1
+        imageView.layer.masksToBounds = false
+        imageView.layer.borderColor = UIColor.black.cgColor
+        imageView.layer.cornerRadius = imageView.frame.height/2
+        imageView.clipsToBounds = true
+    }
 }

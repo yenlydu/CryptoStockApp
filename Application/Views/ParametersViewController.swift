@@ -11,12 +11,10 @@ class ParametersViewController : UITableViewController {
 
     @IBOutlet var labelCountry: UILabel!
     @IBOutlet var labelCurrency: UILabel!
-    
+    lazy var presenter = ParametersViewPresenter(with: self)
     @IBOutlet var parametersTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.labelCountry.text = "Country".localized()
-        self.labelCurrency.text = "ChangeCurrency".localized()
+        self.presenter.setLabels()
      }
 }

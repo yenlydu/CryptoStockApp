@@ -14,14 +14,11 @@ class ProfileViewController : UIViewController {
     @IBOutlet weak var button: UIButton!
 
     @IBOutlet var menuSlider: UIBarButtonItem!
+    lazy var presenter = ProfileViewPresenter(with: self)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        imageView.layer.borderWidth = 1
-        imageView.layer.masksToBounds = false
-        imageView.layer.borderColor = UIColor.black.cgColor
-        imageView.layer.cornerRadius = imageView.frame.height/2
-        imageView.clipsToBounds = true
+        self.presenter.imageLayout()
     }
 
 }
