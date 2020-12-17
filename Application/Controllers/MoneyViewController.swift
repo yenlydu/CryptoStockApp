@@ -7,10 +7,10 @@
 
 import Foundation
 import UIKit
-
+//import <#module#>
 class MoneyViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    @IBOutlet var tableView: UITableView!
+    @IBOutlet private weak var tableView: UITableView!
     var json = JSONParser()
     var cellClicked : String = "nil"
     var jsonArray : [Cryptocurrency] = []

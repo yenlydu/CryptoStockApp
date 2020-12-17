@@ -11,7 +11,7 @@ class ChangeLanguageViewController : UIViewController, UIPickerViewDataSource, U
     var selectedLanguage: String?
     let pickerData:Array = ["French", "English", "Netherlands"]
     var variable: String = ""
-    var gravity: String?
+    var selection = ""
     var selected: String {
         return UserDefaults.standard.string(forKey: "selected") ?? ""
     }
@@ -28,20 +28,36 @@ class ChangeLanguageViewController : UIViewController, UIPickerViewDataSource, U
         return pickerData[row]
     }
 
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        selection = pickerData[row]
 
+        print ("--")
+        print ("ligne : ", row)
+        print ("colonne : ", component)
+        print ("Fruit : ", selection)
+    }
+    
     @IBOutlet var parametersView: UIPickerView!
     override func viewDidLoad() {
         super.viewDidLoad()
         parametersView.dataSource = self
         parametersView.delegate = self
-        print("enter")
         title = "Parameters".localized()
-        print(gravity)
-        if let row = pickerData.firstIndex(of: selected) {
-            print(parametersView.selectRow(row, inComponent: 0, animated: false))
-         }
+
+        print(selection.isEmpty)
+        if (selection.isEmpty) {
+            print("enter")
+            selection = pickerData[0]
+            print("test",selection)
+        }
+        let splits = "French".localized().components(separatedBy: ",")
+        print(splits)
+//        var firstName: String = fullNameArr[0]
+
+        print(Locale.current.languageCode)
+
      }
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        UserDefaults.standard.set(pickerData[row], forKey: "selected")
-    }
+//    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+//        UserDefaults.standard.set(pickerData[row], forKey: "selected")
+//    }
 }

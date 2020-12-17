@@ -64,7 +64,6 @@ public class JSONParser {
         do {
             let decodedData = try JSONDecoder().decode(Investments.self,
                                                        from: jsonData)
-            print(decodedData.investments)
             return (decodedData.investments)
         } catch let jsonError as NSError {
             print("JSON decode failed: \(jsonError.localizedDescription)")

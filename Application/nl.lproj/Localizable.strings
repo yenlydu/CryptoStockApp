@@ -1,0 +1,30 @@
+/*
+  english
+  IOSBasic
+
+  Created by Duong Yen-Ly on 03/12/2020.
+  
+*/
+
+
+"French" = "Frans,fr";
+"English" = "Engels,en";
+"Dutch" = "Nederlands,nl";
+"ChangeCurrency" = "Munteenheid";
+"Country" = "Land";
+"Parameters" = "Instellingen";
+"welcomeTitle" = "Welkom !";
+"TabBarController.Prices" = "Prijzen";
+"TabBarController.Profile" = "Profiel";
+"TabBarController.Home" = "huis";
+"Currency" = "€";
+"About" = "Over";
+"About.Bitcoin" = "Bitcoin is 's werelds eerste cryptografische munteenheid  en wordt veilig opgeslagen en uitgewisseld via internet met behulp van een digitaal register, een zogenaamde blockchain. Bitcoins kunnen worden opgesplitst in eenheden genaamd satoshis, die elk 0,00000001 bitcoin waard zijn.";
+"About.Ethereum" = "De term Ethereum is een combinatie van een cryptografisch systeem en een gedecentraliseerd IT-platform. Ontwikkelaars kunnen het platform gebruiken om gedecentraliseerde applicaties te maken en nieuwe cryptoactiva uit te geven, genaamd Ethereum-tokens.";
+"About.Litecoin" = "Litecoin is een versleutelingssysteem dat een sneller betalingsbevestigingsprogramma en een ander versleutelingsalgoritme gebruikt dan Bitcoin.";
+"About.Tether" = "USDT is een token dat probeert de koers van de Amerikaanse dollar te volgen. Idealiter betekent dit dat 1 USDT op de beurs wordt verhandeld tegen precies $ 1,00 USD. Houd er rekening mee dat Coinbase geen USDT ondersteunt, dus u moet geen USDT naar uw Bitcoin-account op Coinbase sturen.";
+"About.Chainlink" = "Chainlink (LINK) is een Ethereum-token dat wordt gebruikt door het gedecentraliseerde Chainlink-netwerk van orakels. Dit netwerk maakt het mogelijk dat intelligente contracten op Ethereum veilig verbinding maken met externe gegevensbronnen, PLC's en betalingssystemen.";
+"About.BitcoinCash" = "Bitcoin Cash is een wijziging van het Bitcoin-protocol dat is ontworpen om de dagelijkse transactiecapaciteit van het netwerk te vergroten.";
+"About.Polkadot" = "Polkadot is een open-source sharding multichain-protocol dat de cross-chain-overdracht van alle gegevens of activatypen vergemakkelijkt, niet alleen tokens, waardoor een breed scala aan blockchains met elkaar kunnen worden gecombineerd.";
+"About.BinanceCoin" = "Binance Coin is een cryptomunt dat wordt gebruikt voor de betaling van vergoedingen op het Binance-uitwisselingsplatform voor cryptomunten. De vergoedingen die in Binance Coin op dit platform worden betaald, krijgen korting.";
+

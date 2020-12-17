@@ -10,17 +10,18 @@ import UIKit
 class TabBarViewController: UITabBarController {
 
 
-    @IBOutlet var tabbar: UITabBar!
+    @IBOutlet private weak var tabbar: UITabBar!
     var tabBarName : [String] = ["TabBarController.Home", "TabBarController.Prices", "TabBarController.Profile"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "welcomeTitle".localized()
         print("welcomeTitle".localized())
-        for index  in 0...(tabbar.items!.count - 1) {
-            tabbar.items?[index].title = tabBarName[index].localized()
+        tabbar.items?.enumerated().forEach {
+            index, item in
+            item.title = tabBarName[index].localized()
+            print(item.title!)
         }
     }
-
 
 }
