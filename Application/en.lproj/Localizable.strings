@@ -1,0 +1,30 @@
+/*
+  english
+  IOSBasic
+
+  Created by Duong Yen-Ly on 03/12/2020.
+  
+*/
+
+
+"French" = "French,fr";
+"English" = "English,en";
+"Dutch" = "Dutch,nl";
+"ChangeCurrency" = "Currency";
+"Country" = "Country";
+"Parameters" = "Parameters";
+"welcomeTitle" = "Welcome !";
+"TabBarController.Prices" = "Prices";
+"TabBarController.Profile" = "Profile";
+"TabBarController.Home" = "Home";
+"Currency" = "$";
+"About" = "About";
+"About.Bitcoin" = "Bitcoin is the world's first cryptographic currency and is stored and exchanged securely over the Internet using a digital register called a blockchain. Bitcoins can be split into units called satoshis, each of which is worth 0.00000001 bitcoin.";
+"About.Ethereum" = "The term Ethereum is a combination of a cryptographic system and a decentralised IT platform. Developers can use the platform to create decentralised applications and issue new crypto-actives called Ethereum tokens.";
+"About.Litecoin" = "Litecoin is an encryption system that uses a faster payment confirmation program and a different encryption algorithm than Bitcoin.";
+"About.Tether" = "USDT is a token that attempts to track the rate of the US dollar. Ideally, this means that 1 USDT trades on the stock exchange at exactly $1.00 USD. Please note that Coinbase does not support USDT, so you should not send USDT to your Bitcoin account on Coinbase.";
+"About.Chainlink" = "Chainlink (LINK) is an Ethereum token used by the decentralised Chainlink network of oracles. This network enables intelligent contracts on Ethereum to connect securely to external data sources, PLCs and payment systems.";
+"About.BitcoinCash" = "Bitcoin Cash is a modification of the Bitcoin protocol designed to enhance the network's daily transaction capacity.";
+"About.Polkadot" = "Polkadot is an open-source sharding multichain protocol that facilitates the cross-chain transfer of any data or asset types, not just tokens, thereby making a wide range of blockchains interoperable with each other.";
+"About.BinanceCoin" = "Binance Coin is a cryptomoney used for the payment of fees on the Binance cryptomoney exchange platform. The fees paid in Binance Coin on this platform receive a discount.";
+

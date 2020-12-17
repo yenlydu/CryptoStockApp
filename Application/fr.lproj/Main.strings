@@ -1,0 +1,21 @@
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "5HF-ga-bl2"; */
+"5HF-ga-bl2.text" = "Label";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "COe-tx-4C3"; */
+"COe-tx-4C3.text" = "Subtitle";
+
+/* Class = "UITabBarItem"; title = "Prices"; ObjectID = "EmG-h3-P5I"; */
+"EmG-h3-P5I.title" = "Prices";
+
+/* Class = "UITabBarItem"; title = "Profile"; ObjectID = "GWi-nU-ouf"; */
+"GWi-nU-ouf.title" = "Profile";
+
+/* Class = "UITabBarItem"; title = "Home"; ObjectID = "MDz-0I-wDs"; */
+"MDz-0I-wDs.title" = "Home";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "jkc-Fv-q0I"; */
+"jkc-Fv-q0I.text" = "Title";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "xDe-vd-o8V"; */
+"xDe-vd-o8V.normalTitle" = "Button";

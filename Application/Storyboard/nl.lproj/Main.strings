@@ -1,0 +1,42 @@
+
+/* Class = "UILabel"; text = "LabelCurrency"; ObjectID = "1ku-vy-gbW"; */
+"1ku-vy-gbW.text" = "LabelCurrency";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ASt-SW-9j0"; */
+"ASt-SW-9j0.text" = "Label";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "COe-tx-4C3"; */
+"COe-tx-4C3.text" = "Subtitle";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "EIq-o1-Zuk"; */
+"EIq-o1-Zuk.normalTitle" = "Button";
+
+/* Class = "UITabBarItem"; title = "Prices"; ObjectID = "EmG-h3-P5I"; */
+"EmG-h3-P5I.title" = "Prices";
+
+/* Class = "UITabBarItem"; title = "Profile"; ObjectID = "GWi-nU-ouf"; */
+"GWi-nU-ouf.title" = "Profile";
+
+/* Class = "UITabBarItem"; title = "Home"; ObjectID = "MDz-0I-wDs"; */
+"MDz-0I-wDs.title" = "Home";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "OI0-xf-6bS"; */
+"OI0-xf-6bS.title" = "Item";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "jkc-Fv-q0I"; */
+"jkc-Fv-q0I.text" = "Title";
+
+/* Class = "UILabel"; text = "Bitcoin Information"; ObjectID = "m9m-hw-E6T"; */
+"m9m-hw-E6T.text" = "Bitcoin Information";
+
+/* Class = "UILabel"; text = "About"; ObjectID = "nqB-sk-HpS"; */
+"nqB-sk-HpS.text" = "About";
+
+/* Class = "UILabel"; text = "BuyLabel"; ObjectID = "oxL-Sm-lJN"; */
+"oxL-Sm-lJN.text" = "BuyLabel";
+
+/* Class = "UIButton"; normalTitle = "Buy"; ObjectID = "wu4-KU-ckx"; */
+"wu4-KU-ckx.normalTitle" = "Buy";
+
+/* Class = "UILabel"; text = "SellLabel"; ObjectID = "xoo-RJ-sst"; */
+"xoo-RJ-sst.text" = "SellLabel";
