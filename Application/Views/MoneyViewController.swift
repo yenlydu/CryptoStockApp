@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit
-//import <#module#>
+
 class MoneyViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
@@ -34,7 +34,7 @@ class MoneyViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == self.presenter.getSegueIdentifier() {
-            let vc = segue.destination as! CryptoInformations
+            let vc = segue.destination as! CryptoInformationsViewController
             vc.cellClicked = cellClicked
         }
     }

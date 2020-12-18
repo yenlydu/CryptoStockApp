@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Crypto Informations-->
+        <!--Crypto Informations View Controller-->
         <scene sceneID="N9c-bV-0Ko">
             <objects>
-                <viewController id="6oz-UU-Xni" customClass="CryptoInformations" customModule="IOSBasic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="6oz-UU-Xni" customClass="CryptoInformationsViewController" customModule="IOSBasic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2vd-tM-5Bt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -84,7 +84,9 @@
                         <outlet property="aboutLabel" destination="nqB-sk-HpS" id="M6K-e8-26r"/>
                         <outlet property="bitcoinInformation" destination="m9m-hw-E6T" id="tpB-hq-sQr"/>
                         <outlet property="buyButton" destination="EIq-o1-Zuk" id="t2U-J1-F9b"/>
+                        <outlet property="buyLabel" destination="oxL-Sm-lJN" id="pQ7-bI-r6A"/>
                         <outlet property="sellButton" destination="wu4-KU-ckx" id="6RP-ue-vFu"/>
+                        <outlet property="sellLabel" destination="xoo-RJ-sst" id="hVl-v2-SuB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hj6-yC-RXr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

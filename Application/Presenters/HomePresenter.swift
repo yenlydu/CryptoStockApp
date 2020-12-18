@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class HomeViewPresenter {
+class HomePresenter {
     var view: HomeView?
     init(with view: HomeView) {
         self.view = view
@@ -25,7 +25,5 @@ protocol HomeView : AnyObject {
 
 extension HomeViewController: HomeView {
     func setTitle() {
-        title = "Welcome".localized()
-
     }
 }

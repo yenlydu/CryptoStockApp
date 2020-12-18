@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProfileViewPresenter {
+class ProfilePresenter {
     var view: ProfileView?
     
     init(with view: ProfileView) {

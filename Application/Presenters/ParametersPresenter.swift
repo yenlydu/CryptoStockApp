@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class ParametersViewPresenter {
+class ParametersPresenter {
     var view: ParametersView?
     
     init(with view : ParametersView) {

@@ -11,7 +11,7 @@ class HomeViewController: UIViewController {
 //    @IBOutlet private weak var label: UILabel!
 //    @IBOutlet private weak var text: UITextField!
 //    @IBOutlet private weak var button: UIButton!
-    lazy var presenter = HomeViewPresenter(with: self)
+    lazy var presenter = HomePresenter(with: self)
     
     override func viewDidLoad() {
         super.viewDidLoad()

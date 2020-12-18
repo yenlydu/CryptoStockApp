@@ -14,7 +14,7 @@ class ProfileViewController : UIViewController {
     @IBOutlet weak var button: UIButton!
 
     @IBOutlet var menuSlider: UIBarButtonItem!
-    lazy var presenter = ProfileViewPresenter(with: self)
+    lazy var presenter = ProfilePresenter(with: self)
     
     override func viewDidLoad() {
         super.viewDidLoad()

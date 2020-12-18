@@ -19,6 +19,8 @@
 "TabBarController.Home" = "Accueil";
 "Currency" = "€";
 "About" = "A propos de";
+"Buy" = "Acheter";
+"Sell" = "Vendre";
 "About.Bitcoin" = "Première cryptomonnaie mondiale, le bitcoin est stocké et échangé de manière sécurisée sur Internet à l'aide d'un registre numérique appelé blockchain. Les bitcoins sont fractionnables en unités appelées satoshis qui valent chacune 0,00000001 bitcoin.";
 "About.Ethereum" = "Le terme Ethereum est une cryptomonnaie doublée d'une plate-forme informatique décentralisée. Les développeurs peuvent utiliser la plate-forme pour créer des applications décentralisées et émettre de nouveaux crypto-actifs qualifiés de jetons Ethereum.";
 "About.Litecoin" = "Le litecoin est une cryptomonnaie qui utilise un programme de confirmation de paiement plus rapide et un autre algorithme de cryptage que ceux du bitcoin.";

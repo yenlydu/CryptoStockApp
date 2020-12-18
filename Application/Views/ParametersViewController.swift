@@ -11,7 +11,7 @@ class ParametersViewController : UITableViewController {
 
     @IBOutlet var labelCountry: UILabel!
     @IBOutlet var labelCurrency: UILabel!
-    lazy var presenter = ParametersViewPresenter(with: self)
+    lazy var presenter = ParametersPresenter(with: self)
     @IBOutlet var parametersTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
