@@ -12,8 +12,7 @@ class ChangeLanguageViewController : UIViewController, UIPickerViewDataSource, U
     @IBOutlet var parametersView: UIPickerView!
 
     lazy var presenter = LanguagePresenter(with: self)
-
-
+    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }

@@ -8,15 +8,18 @@
 import Foundation
 import UIKit
 
-class MoneyPresenter {
+class MoneyPresenter : CachingData {
     var json = JSONParser()
     var jsonArray : [Cryptocurrency] = []
+
+
     var view : MoneyView?
     private var segueIdentifier : String = "displayCryptoInfo"
     private var cellIdentifier : String = "cell"
 
     init(with view: MoneyView) {
         self.view = view
+        self.jsonArray = json.getInvestment()
     }
     
     func getSegueIdentifier() -> String {
@@ -42,8 +45,9 @@ class MoneyPresenter {
     }
 
     func tableViewLayout() {
-        jsonArray = json.getInvestment()
+//        jsonArray = (self.getObject(fileName: "cryptocurrencies") as? [Cryptocurrency])!
         view?.setTitle()
+
         view?.tableViewLayout()
     }
     func configureCell(indexPath : Int) -> UITableViewCell {

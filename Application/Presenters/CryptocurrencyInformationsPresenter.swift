@@ -14,21 +14,14 @@ class CyptocurrencyInformationPresenter {
     }
     func setInformations(tempCellClickedName: String) {
         view?.setInformations(cellClickedName: tempCellClickedName)
-        view?.setButton()
     }
 }
 
 protocol CryptocurrencyView : AnyObject {
     func setInformations(cellClickedName: String)
-    func setButton()
 }
 
 extension CryptoInformationsViewController : CryptocurrencyView {
-    
-    func setButton() {
-        self.buyLabel.text = "Buy"
-        self.sellLabel.text = "Sell"
-    }
     
     func setInformations(cellClickedName: String) {
         let tempAboutCellClicked = "About." + cellClickedName.replacingOccurrences(of: " ", with: "")

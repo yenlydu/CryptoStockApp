@@ -56,4 +56,5 @@ extension ChangeLanguageViewController: ChangeLanguagePresenterView {
 //            var firstName: String = fullNameArr[0]
 
         print(Locale.current.languageCode)
-    }}
+    }
+}

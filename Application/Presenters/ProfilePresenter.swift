@@ -13,22 +13,31 @@ class ProfilePresenter {
     init(with view: ProfileView) {
         self.view = view
     }
-    
-    func imageLayout() {
-        self.view?.imageLayout()
+
+    func setLabelDisplay() {
+        self.view?.setLabelDisplay()
     }
 }
 
 protocol ProfileView : AnyObject {
-    func imageLayout()
+    func setLabelDisplay()
 }
 
 extension ProfileViewController : ProfileView {
-    func imageLayout() {
-        imageView.layer.borderWidth = 1
-        imageView.layer.masksToBounds = false
-        imageView.layer.borderColor = UIColor.black.cgColor
-        imageView.layer.cornerRadius = imageView.frame.height/2
-        imageView.clipsToBounds = true
+    func setLabelDisplay() {
+        self.text.text = "My Wallet"
+        self.text.textAlignment = .center
+        self.text.borderStyle = .none
+        self.text.backgroundColor = UIColor.groupTableViewBackground
+        self.text.layer.cornerRadius = 14
+        self.text.layer.borderWidth = 0.25
+        self.text.layer.borderColor = UIColor.white.cgColor
+        self.text.layer.shadowOpacity = 1
+        self.text.layer.shadowRadius = 3.0
+        self.text.layer.shadowOffset = CGSize.zero
+        self.text.layer.shadowColor = UIColor.gray.cgColor
+        self.text.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: text.frame.height))
+        self.text.leftViewMode = UITextField.ViewMode.always
+        self.text.isUserInteractionEnabled = false
     }
 }
