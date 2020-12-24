@@ -24,11 +24,43 @@ class TabBarPresenter : CachingData {
         return paths[0]
     }
 
-    func setTitle() {
+    func saveTransactionSoldDate() {
+        let date = self.getObject(fileName: "transactionSoldDate") as? Dictionary<String, String>
+        
+        let transactionDate = ["Bitcoin" : "Never", "Ethereum" : "Never", "Litecoin" : "Never", "Tether" : "Never", "Chainlink" : "Never", "Bitcoin Cash" : "Never", "Polkadot" : "Never", "Binance Coin" : "Never"]
+
+        if case Optional<Any>.none = date {
+            if self.saveObject(fileName:
+                                "transactionSoldDate", object: transactionDate) {
+                print("saved")
+            } else {
+                print("not saved")
+            }
+        } else {
+            print("value is: \(date!)")
+        }
+    }
+    func saveTransactionBoughtDate() {
+        let date = self.getObject(fileName: "transactionBoughtDate") as? Dictionary<String, String>
+
+        if case Optional<Any>.none = date {
+            let transactionDate = ["Bitcoin" : "Never", "Ethereum" : "Never", "Litecoin" : "Never", "Tether" : "Never", "Chainlink" : "Never", "Bitcoin Cash" : "Never", "Polkadot" : "Never", "Binance Coin" : "Never"]
+
+            if self.saveObject(fileName:
+                                "transactionBoughtDate", object: transactionDate) {
+                print("saved")
+            } else {
+                print("not saved")
+            }
+        } else {
+            print("value is: \(date!)")
+        }
+    }
+    
+    func saveWallet() {
         let value = self.getObject(fileName: "myWallet") as? Dictionary<String, Double>
         if case Optional<Any>.none = value {
             let myWallet = ["Bitcoin" : Double(0), "Ethereum" : Double(0), "Litecoin" : Double(0), "Tether" : Double(0), "Chainlink" : Double(0), "Bitcoin Cash" : Double(0), "Polkadot" : Double(0), "Binance Coin" : Double(0)]
-
             if self.saveObject(fileName:
                                 "myWallet", object: myWallet) {
                 print("saved")
@@ -38,6 +70,13 @@ class TabBarPresenter : CachingData {
         } else {
             print("value is: \(value!)")
         }
+
+    }
+    
+    func setTitle() {
+        self.saveTransactionSoldDate()
+        self.saveTransactionBoughtDate()
+        self.saveWallet()
         view?.setTitle()
      }
 }

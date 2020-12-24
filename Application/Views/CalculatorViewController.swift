@@ -25,6 +25,7 @@ class CalculatorViewController: UIViewController, CachingData {
         self.dismiss(animated: true, completion: nil)
     }
     
+    
     @IBAction func buttonRm(_ sender: Any) {
         let string = self.amountTextField.text?.dropLast()
         self.amountTextField.text = String(string!)
@@ -33,8 +34,8 @@ class CalculatorViewController: UIViewController, CachingData {
     @IBAction func button0(_ sender: Any) {
         amountTextField.text = amountTextField.text! + "0"
     }
-    @IBAction func buttonC(_ sender: Any) {
-        amountTextField.text = ""
+    @IBAction func buttonDot(_ sender: Any) {
+        amountTextField.text = amountTextField.text! + "."
     }
     
     @IBAction func button9(_ sender: Any) {

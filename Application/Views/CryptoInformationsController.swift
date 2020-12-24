@@ -15,22 +15,21 @@ class CryptoInformationsViewController: UIViewController, CachingData {
     @IBOutlet weak var sellButton: UIButton!
     lazy var presenter = CyptocurrencyInformationPresenter(with: self)
     var cellClicked: String = ""
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        bitcoinInformation.font = bitcoinInformation.font.withSize(20)
-
         self.presenter.setInformations(tempCellClickedName: cellClicked)
     }
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "BuyAmountIdentifier" {
+        if segue.identifier == self.presenter.getBuyIdentifier() {
             let nav = segue.destination as! UINavigationController
             let vc = nav.topViewController as! CalculatorViewController
             vc.cryptoName = cellClicked
-        } else if segue.identifier == "SellAmountIdentifier" {
+        } else if segue.identifier == self.presenter.getSellIdentifier() {
             let nav = segue.destination as! UINavigationController
             let vc = nav.topViewController as! CalculatorViewController
-
             vc.cryptoName = cellClicked
         }
     }

@@ -18,9 +18,14 @@
 "TabBarController.Profile" = "Profiel";
 "TabBarController.Home" = "huis";
 "Currency" = "€";
+"DateFormat" = "dd/MM/yyyy HH:mm:ss";
 "About" = "Over";
 "Buy" = "Kopen";
+"Never" = "Nooit";
+"LastSold" = "Laatste keer verkocht : ";
+"LastBought" = "Laatst gekocht : ";
 "Sell" = "Verkopen";
+"Wallet" = "Mijn portemonnee";
 "About.Bitcoin" = "Bitcoin is 's werelds eerste cryptografische munteenheid  en wordt veilig opgeslagen en uitgewisseld via internet met behulp van een digitaal register, een zogenaamde blockchain. Bitcoins kunnen worden opgesplitst in eenheden genaamd satoshis, die elk 0,00000001 bitcoin waard zijn.";
 "About.Ethereum" = "De term Ethereum is een combinatie van een cryptografisch systeem en een gedecentraliseerd IT-platform. Ontwikkelaars kunnen het platform gebruiken om gedecentraliseerde applicaties te maken en nieuwe cryptoactiva uit te geven, genaamd Ethereum-tokens.";
 "About.Litecoin" = "Litecoin is een versleutelingssysteem dat een sneller betalingsbevestigingsprogramma en een ander versleutelingsalgoritme gebruikt dan Bitcoin.";

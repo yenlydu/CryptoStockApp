@@ -9,11 +9,22 @@ import UIKit
 
 class ProfilePresenter {
     var view: ProfileView?
-    
+    var walletIdentifier: String = "walletIdentifier"
+    var cellProfile: String = "cellProfile"
+    var cryptoClicked: String = ""
+
     init(with view: ProfileView) {
         self.view = view
     }
+    
+    func getCellProfile() -> String {
+        return self.cellProfile
+    }
 
+    func getWalletIdentifier() -> String {
+        return self.walletIdentifier
+    }
+    
     func setLabelDisplay() {
         self.view?.setLabelDisplay()
     }
@@ -25,10 +36,10 @@ protocol ProfileView : AnyObject {
 
 extension ProfileViewController : ProfileView {
     func setLabelDisplay() {
-        self.text.text = "My Wallet"
+        self.text.text = "Wallet".localized()
         self.text.textAlignment = .center
         self.text.borderStyle = .none
-        self.text.backgroundColor = UIColor.groupTableViewBackground
+//        self.text.backgroundColor = UIColor.groupTableViewBackground
         self.text.layer.cornerRadius = 14
         self.text.layer.borderWidth = 0.25
         self.text.layer.borderColor = UIColor.white.cgColor

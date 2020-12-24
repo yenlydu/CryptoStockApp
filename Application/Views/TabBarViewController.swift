@@ -18,5 +18,6 @@ class TabBarViewController: UITabBarController {
         let navController = self.viewControllers![2] as! UINavigationController
         let vc = navController.topViewController as! ProfileViewController
         vc.crypto = self.presenter.getJsonArray()
+        
     }
 }

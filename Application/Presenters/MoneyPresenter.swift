@@ -45,19 +45,13 @@ class MoneyPresenter : CachingData {
     }
 
     func tableViewLayout() {
-//        jsonArray = (self.getObject(fileName: "cryptocurrencies") as? [Cryptocurrency])!
         view?.setTitle()
-
         view?.tableViewLayout()
-    }
-    func configureCell(indexPath : Int) -> UITableViewCell {
-        return configureCell(indexPath: indexPath)
     }
 }
 protocol MoneyView {
     func setTitle()
     func tableViewLayout()
-//    func configureCell(indexPath: Int) -> UITableViewCell
 }
 
 extension MoneyViewController : MoneyView {
@@ -69,16 +63,4 @@ extension MoneyViewController : MoneyView {
         self.tableView.estimatedRowHeight = 160
 
     }
-//    func configureCell(indexPath : Int) -> UITableViewCell {
-//        var cell = tableView.dequeueReusableCell(withIdentifier: self.presenter.getCellIdentifier())
-//        if cell == nil {
-//            cell = UITableViewCell(style: .default, reuseIdentifier: self.presenter.getCellIdentifier())
-//        }
-//        cell?.imageView?.image = UIImage(named: self.presenter.getJsonArrayIcon(indexRow: indexPath))
-//
-//        cell?.textLabel?.text = self.presenter.getJsonArrayName(indexRow: indexPath)
-//        cell?.detailTextLabel?.text = self.presenter.getJsonArraySymbol(indexRow: indexPath)
-//        cell?.tag = indexPath
-//        return cell!
-//    }
 }

@@ -8,40 +8,51 @@
 import Foundation
 
 import UIKit
+import Charts
 
 class ProfileViewController : UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet var text: UITextField!
     @IBOutlet var tableView: UITableView!
-    var crypto: [Cryptocurrency] = []
+    var crypto : [Cryptocurrency] = []
     lazy var presenter = ProfilePresenter(with: self)
-    var str:String = ""
+    var cryptoClicked:String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print ("profil", crypto[0].name)
         
         self.presenter.setLabelDisplay()
         tableView.delegate = self
         tableView.dataSource = self
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        self.cryptoClicked = self.crypto[indexPath.row].name
+        performSegue(withIdentifier: self.presenter.getWalletIdentifier(), sender: self)
+
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == self.presenter.getWalletIdentifier() {
+            let vc = segue.destination as! WalletViewController
+            vc.cryptoClicked = cryptoClicked          
+        }
+    }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return crypto.count
+        return self.crypto.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCell(withIdentifier: "cellProfile")
+        var cell = tableView.dequeueReusableCell(withIdentifier: self.presenter.getCellProfile())
         if cell == nil {
-            cell = UITableViewCell(style: .default, reuseIdentifier: "cellProfile")
+            cell = UITableViewCell(style: .default, reuseIdentifier: self.presenter.getCellProfile())
         }
-        cell?.textLabel?.text = crypto[indexPath.row].name
-        cell?.detailTextLabel?.text = crypto[indexPath.row].symbol
-        cell?.imageView?.image = UIImage(named: crypto[indexPath.row].icon)
-
+        cell?.textLabel?.text = self.crypto[indexPath.row].name
+        cell?.detailTextLabel?.text = self.crypto[indexPath.row].symbol
+        cell?.imageView?.image = UIImage(named: self.crypto[indexPath.row].icon)
+        
         return cell!
     }
 
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-    }
 }

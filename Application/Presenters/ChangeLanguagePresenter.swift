@@ -18,43 +18,23 @@ class LanguagePresenter {
         self.view = view
     }
     private func splitLanguageLocalized() {
-        dataArray.append("French".localized().components(separatedBy: ",")[0])
-        dataArray.append("English".localized().components(separatedBy: ",")[0])
-        dataArray.append("Dutch".localized().components(separatedBy: ",")[0])
+        dataArray.append("French".localized())
+        dataArray.append("English".localized())
+        dataArray.append("Dutch".localized())
     }
 
-    func getDataSize() -> Array<String> {
+    func getLanguages() -> Array<String> {
         return self.dataArray
     }
     
     func displayLanguage () {
         splitLanguageLocalized()
-        print(dataArray)
-        view?.addTitle()
     }
 
 }
 
 protocol ChangeLanguagePresenterView: AnyObject {
-    func addTitle()
 }
 
 extension ChangeLanguageViewController: ChangeLanguagePresenterView {
-
-    
-    func addTitle() {
-        
-//        var selection = ""
-//        print(selection.isEmpty)
-//        if (selection.isEmpty) {
-//            print("enter")
-//            selection = pickerData[0]
-//            print("test",selection)
-//        }
-//        let splits = "French".localized().components(separatedBy: ",")
-//        print(splits)
-//            var firstName: String = fullNameArr[0]
-
-        print(Locale.current.languageCode)
-    }
 }

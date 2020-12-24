@@ -19,7 +19,12 @@
 "TabBarController.Home" = "Accueil";
 "Currency" = "€";
 "About" = "A propos de";
+"Never" = "Jamais";
 "Buy" = "Acheter";
+"DateFormat" = "dd/MM/yyyy HH:mm:ss";
+"Wallet" = "Mon portefeuille";
+"LastSold" = "Dernière fois vendue : ";
+"LastBought" = "Dernière fois achetée : ";
 "Sell" = "Vendre";
 "About.Bitcoin" = "Première cryptomonnaie mondiale, le bitcoin est stocké et échangé de manière sécurisée sur Internet à l'aide d'un registre numérique appelé blockchain. Les bitcoins sont fractionnables en unités appelées satoshis qui valent chacune 0,00000001 bitcoin.";
 "About.Ethereum" = "Le terme Ethereum est une cryptomonnaie doublée d'une plate-forme informatique décentralisée. Les développeurs peuvent utiliser la plate-forme pour créer des applications décentralisées et émettre de nouveaux crypto-actifs qualifiés de jetons Ethereum.";

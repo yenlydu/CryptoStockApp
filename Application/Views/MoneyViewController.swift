@@ -41,11 +41,9 @@ class MoneyViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCell(withIdentifier: self.presenter.getCellIdentifier())
         if cell == nil {
-
             cell = UITableViewCell(style: .default, reuseIdentifier: self.presenter.getCellIdentifier())
         }
         cell?.imageView?.image = UIImage(named: self.presenter.getJsonArrayIcon(indexRow: indexPath.row))
-
         cell?.textLabel?.text = self.presenter.getJsonArrayName(indexRow: indexPath.row)
         cell?.detailTextLabel?.text = self.presenter.getJsonArraySymbol(indexRow: indexPath.row)
         cell?.tag = indexPath.row
