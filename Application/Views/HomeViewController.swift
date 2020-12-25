@@ -6,12 +6,13 @@
 //
 
 import UIKit
+import Charts
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, ChartViewDelegate {
     lazy var presenter = HomePresenter(with: self)
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.presenter.setTitle()
-    }
+    }    
 }

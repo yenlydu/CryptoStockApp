@@ -36,6 +36,7 @@ class MoneyViewController: UIViewController, UITableViewDelegate, UITableViewDat
         if segue.identifier == self.presenter.getSegueIdentifier() {
             let vc = segue.destination as! CryptoInformationsViewController
             vc.cellClicked = cellClicked
+            vc.jsonArray = self.presenter.getJsonArray()
         }
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
