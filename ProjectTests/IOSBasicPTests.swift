@@ -34,7 +34,6 @@ class IOSBasicTests: XCTestCase {
         super.setUp()
         let data = try getData(fromJSON: "prices")
         investments = try JSONDecoder().decode(Investments.self, from: data)
-        testJSONCount()
     }
 
     override func tearDownWithError() throws {
@@ -42,11 +41,22 @@ class IOSBasicTests: XCTestCase {
         super.tearDown()
     }
 
-    
     func testJSONCount() {
         XCTAssertEqual(investments?.investments.count, 8)
     }
 
+    func testJSONBitcoin() {
+        XCTAssertEqual(investments?.investments[0].name, "Bitcoin")
+        XCTAssertEqual(investments?.investments[0].symbol, "BTC")
+        XCTAssertEqual(investments?.investments[0].icon, "bitcoin.png")
+    }
+    
+    func testJSONEthereum() {
+        XCTAssertEqual(investments?.investments[1].name, "Ethereum")
+        XCTAssertEqual(investments?.investments[1].symbol, "ETH")
+        XCTAssertEqual(investments?.investments[1].icon, "ethereum.png")
+    }
+    
     func testPerformanceExample() throws {
         self.measure {
         }
