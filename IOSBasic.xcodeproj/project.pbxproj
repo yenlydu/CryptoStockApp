@@ -12,8 +12,8 @@
 		1855A8D5257107E500C508EC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1855A8D4257107E500C508EC /* SceneDelegate.swift */; };
 		1855A8DA257107E500C508EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1855A8D8257107E500C508EC /* Main.storyboard */; };
 		1855A8DC257107E700C508EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1855A8DB257107E700C508EC /* Assets.xcassets */; };
-		1855A8EA257107E700C508EC /* IOSBasicProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1855A8E9257107E700C508EC /* IOSBasicProjectTests.swift */; };
-		1855A8F5257107E700C508EC /* IOSBasicProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1855A8F4257107E700C508EC /* IOSBasicProjectUITests.swift */; };
+		1855A8EA257107E700C508EC /* IOSBasicPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1855A8E9257107E700C508EC /* IOSBasicPTests.swift */; };
+		1855A8F5257107E700C508EC /* IOSBasicUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1855A8F4257107E700C508EC /* IOSBasicUITests.swift */; };
 		1855A90625710DA300C508EC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1855A90525710DA300C508EC /* ProfileViewController.swift */; };
 		186742492574378200263972 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186742482574378200263972 /* JSONParser.swift */; };
 		1867424B257437C400263972 /* MoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1867424A257437C400263972 /* MoneyViewController.swift */; };
@@ -71,10 +71,10 @@
 		1855A8DB257107E700C508EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1855A8E0257107E700C508EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1855A8E5257107E700C508EC /* IOSBasicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IOSBasicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1855A8E9257107E700C508EC /* IOSBasicProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSBasicProjectTests.swift; sourceTree = "<group>"; };
+		1855A8E9257107E700C508EC /* IOSBasicPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSBasicPTests.swift; sourceTree = "<group>"; };
 		1855A8EB257107E700C508EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1855A8F0257107E700C508EC /* IOSBasicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IOSBasicUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1855A8F4257107E700C508EC /* IOSBasicProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSBasicProjectUITests.swift; sourceTree = "<group>"; };
+		1855A8F4257107E700C508EC /* IOSBasicUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSBasicUITests.swift; sourceTree = "<group>"; };
 		1855A8F6257107E700C508EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1855A90525710DA300C508EC /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		186742482574378200263972 /* JSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
@@ -188,7 +188,7 @@
 		1855A8E8257107E700C508EC /* ProjectTests */ = {
 			isa = PBXGroup;
 			children = (
-				1855A8E9257107E700C508EC /* IOSBasicProjectTests.swift */,
+				1855A8E9257107E700C508EC /* IOSBasicPTests.swift */,
 				1855A8EB257107E700C508EC /* Info.plist */,
 			);
 			path = ProjectTests;
@@ -197,7 +197,7 @@
 		1855A8F3257107E700C508EC /* ProjectUITests */ = {
 			isa = PBXGroup;
 			children = (
-				1855A8F4257107E700C508EC /* IOSBasicProjectUITests.swift */,
+				1855A8F4257107E700C508EC /* IOSBasicUITests.swift */,
 				1855A8F6257107E700C508EC /* Info.plist */,
 			);
 			path = ProjectUITests;
@@ -359,7 +359,6 @@
 					};
 					1855A8EF257107E700C508EC = {
 						CreatedOnToolsVersion = 12.2;
-						TestTargetID = 1855A8CE257107E500C508EC;
 					};
 				};
 			};
@@ -554,7 +553,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1855A8EA257107E700C508EC /* IOSBasicProjectTests.swift in Sources */,
+				1855A8EA257107E700C508EC /* IOSBasicPTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -562,7 +561,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1855A8F5257107E700C508EC /* IOSBasicProjectUITests.swift in Sources */,
+				1855A8F5257107E700C508EC /* IOSBasicUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -769,7 +768,8 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FTHAC7S6RW;
-				INFOPLIST_FILE = IOSBasicProjectTests/Info.plist;
+				INFOPLIST_FILE = ProjectTests/Info.plist;
+				"INFOPLIST_FILE[sdk=*]" = ProjectTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -792,7 +792,8 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FTHAC7S6RW;
-				INFOPLIST_FILE = IOSBasicProjectTests/Info.plist;
+				INFOPLIST_FILE = ProjectTests/Info.plist;
+				"INFOPLIST_FILE[sdk=*]" = ProjectTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -814,17 +815,18 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FTHAC7S6RW;
-				INFOPLIST_FILE = IOSBasicProjectUITests/Info.plist;
+				INFOPLIST_FILE = ProjectUITests/Info.plist;
+				"INFOPLIST_FILE[sdk=*]" = ProjectUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = project.IOSBasicProjectUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = project.IOSBasictUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = IOSBasicProject;
 			};
 			name = Debug;
 		};
@@ -835,17 +837,18 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FTHAC7S6RW;
-				INFOPLIST_FILE = IOSBasicProjectUITests/Info.plist;
+				INFOPLIST_FILE = ProjectUITests/Info.plist;
+				"INFOPLIST_FILE[sdk=*]" = ProjectUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = project.IOSBasicProjectUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = project.IOSBasictUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = IOSBasicProject;
 			};
 			name = Release;
 		};

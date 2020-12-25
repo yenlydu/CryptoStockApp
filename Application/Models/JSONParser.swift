@@ -19,6 +19,7 @@ public class JSONParser {
         do {
             if let bundlePath = Bundle.main.path(forResource: fileName,
                                                  ofType: "json"),
+               
                 let jsonData = try String(contentsOfFile: bundlePath).data(using: .utf8) {
                 return jsonData
             }
