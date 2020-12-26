@@ -16,6 +16,12 @@ class CryptoInformationsViewController: UIViewController, CachingData, ChartView
     @IBOutlet weak var buyButton: UIButton!
     @IBOutlet weak var sellButton: UIButton!
     lazy var presenter = CyptocurrencyInformationPresenter(with: self)
+    @IBOutlet var priceOneDay: UILabel!
+    @IBOutlet var priceOneWeek: UILabel!
+
+    @IBOutlet var variationsLastWeek: UILabel!
+    @IBOutlet var variationLastDay: UILabel!
+    
     var cellClicked: String = ""
     var jsonArray : [Cryptocurrency] = []
     var variations : VariationsLastWeek?
@@ -24,30 +30,17 @@ class CryptoInformationsViewController: UIViewController, CachingData, ChartView
         super.viewDidLoad()
         self.presenter.setInformations(tempCellClickedName: cellClicked)
         lineChart.delegate = self
-        self.getArray()
-        var entries = [ChartDataEntry]()
-        entries.append(ChartDataEntry(x: 0, y: Double(variations!.monday)))
-        entries.append(ChartDataEntry(x: 1, y: Double(variations!.tuesday)))
-        entries.append(ChartDataEntry(x: 2, y: Double(variations!.wednesday)))
-        entries.append(ChartDataEntry(x: 3, y: Double(variations!.thursday)))
-        entries.append(ChartDataEntry(x: 4, y: Double(variations!.friday)))
-        entries.append(ChartDataEntry(x: 5, y: Double(variations!.saturday)))
-        entries.append(ChartDataEntry(x: 6, y: Double(variations!.sunday)))
-
-        let set = LineChartDataSet(entries: entries, label: "Data")
-        set.colors = ChartColorTemplates.material()
-        
-        let data = LineChartData(dataSet: set)
-        self.lineChart.data = data
+        setLineChart()
     }
 
-    func getArray() {
-        for i in 0..<jsonArray.count {
-            if (cellClicked == jsonArray[i].name) {
-                variations = jsonArray[i].variationsLastWeek
-                return
-            }
-        }
+    func setLineChart() {
+        var entries = [ChartDataEntry]()
+        entries = self.presenter.getLineChartDatas()
+
+        let set = LineChartDataSet(entries: entries, label: self.presenter.getLineChartLabel())
+        set.colors = ChartColorTemplates.material()
+        let data = LineChartData(dataSet: set)
+        self.lineChart.data = data
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

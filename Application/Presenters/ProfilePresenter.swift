@@ -39,8 +39,8 @@ extension ProfileViewController : ProfileView {
         self.text.text = "Wallet".localized()
         self.text.textAlignment = .center
         self.text.borderStyle = .none
-//        self.text.backgroundColor = UIColor.groupTableViewBackground
         self.text.layer.cornerRadius = 14
+        self.text.backgroundColor = UIColor.lightGray
         self.text.layer.borderWidth = 0.25
         self.text.layer.borderColor = UIColor.white.cgColor
         self.text.layer.shadowOpacity = 1

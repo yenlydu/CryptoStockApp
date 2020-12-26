@@ -36,7 +36,6 @@ public class JSONParser {
             return (decodedData.investments)
         } catch let jsonError as NSError {
             print("JSON decode failed: \(jsonError.localizedDescription)")
-
             print("decode error")
         }
         return nil

@@ -26,9 +26,7 @@ class ChangeLanguageViewController : UIViewController, UIPickerViewDataSource, U
         self.presenter.displayLanguage()
     }
     
-    @IBAction func buttonChange(_ sender: Any)
-    {
-//        let value = try? self.selectedLanguage?[0]
+    @IBAction func buttonChange(_ sender: Any) {
         changeLanguage(str: self.selectedLanguage![1])
         UserDefaults.standard.set(self.selectedLanguage![1], forKey: "Languages")
         UIView.appearance().semanticContentAttribute = .forceLeftToRight
@@ -37,6 +35,7 @@ class ChangeLanguageViewController : UIViewController, UIPickerViewDataSource, U
     func changeLanguage(str:String) {
         label.text = "Sell".localizableString(str: str)
     }
+
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return self.presenter.getLanguages().count
     }
@@ -49,8 +48,6 @@ class ChangeLanguageViewController : UIViewController, UIPickerViewDataSource, U
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return self.presenter.getLanguages()[row].components(separatedBy: ",")[0]
     }
-    
-
 }
 
 extension String {

@@ -59,6 +59,7 @@ extension CalculatorViewController : CalculatorView {
         self.amountTextField.layer.borderWidth = 1.0
         self.amountTextField.textColor = .black
     }
+    
     func changeWalletAmount(amount: Double) {
         var wallet = self.getObject(fileName: "myWallet") as? Dictionary<String, Double>
         var bought = self.getObject(fileName: "transactionBoughtDate") as? Dictionary<String, String>
@@ -80,15 +81,15 @@ extension CalculatorViewController : CalculatorView {
 
             bought![self.cryptoName] = frnlDate + "|" + dateString
             
-            self.saveObject(fileName: "transactionBoughtDate", object: bought!) as? Dictionary<String, String>
-            self.saveObject(fileName: "myWallet", object: wallet!)
+            _ = self.saveObject(fileName: "transactionBoughtDate", object: bought!)
+            _ = self.saveObject(fileName: "myWallet", object: wallet!)
             
         } else if self.storyboardId == "Sell" {
             wallet![self.cryptoName]! -= Double(amount)
             sold![self.cryptoName] = frnlDate + "|" + dateString
 
-            self.saveObject(fileName: "myWallet", object: wallet!)
-            self.saveObject(fileName: "transactionSoldDate", object: sold!)
+            _ = self.saveObject(fileName: "myWallet", object: wallet!)
+            _ = self.saveObject(fileName: "transactionSoldDate", object: sold!)
         }
         for (key, value) in wallet! {
             print("key is - \(key) and value is - \(value)")

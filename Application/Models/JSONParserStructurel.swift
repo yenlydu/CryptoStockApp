@@ -27,11 +27,6 @@ struct Prices: Codable {
     let usd: Double
 }
 
-struct UpdateDate: Codable {
-    let lastSold: String
-    let lastBought: String
-}
-
 struct Cryptocurrency: Codable {
     let name: String
     let symbol: String
@@ -39,7 +34,6 @@ struct Cryptocurrency: Codable {
     let prices: Prices
     let variationsPercentage: Variations
     let variationsLastWeek: VariationsLastWeek
-    let lastUpdate: UpdateDate
 }
 
 struct Investments: Codable {
