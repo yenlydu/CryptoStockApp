@@ -37,9 +37,9 @@ class TabBarPresenter : CachingData {
                 print("not saved")
             }
         }
-//        else {
-//            print("value is: \(date!)")
-//        }
+        else {
+            print("value is: \(date!)")
+        }
     }
     func saveTransactionBoughtDate() {
         let date = self.getObject(fileName: "transactionBoughtDate") as? Dictionary<String, String>
@@ -49,9 +49,9 @@ class TabBarPresenter : CachingData {
 
             _ = self.saveObject(fileName: "transactionBoughtDate", object: transactionDate)
         }
-//        else {
-//            print("value is: \(date!)")
-//        }
+        else {
+            print("value is: \(date!)")
+        }
     }
     
     func saveWallet() {
@@ -60,9 +60,9 @@ class TabBarPresenter : CachingData {
             let myWallet = ["Bitcoin" : Double(0), "Ethereum" : Double(0), "Litecoin" : Double(0), "Tether" : Double(0), "Chainlink" : Double(0), "Bitcoin Cash" : Double(0), "Polkadot" : Double(0), "Binance Coin" : Double(0)]
             _ = self.saveObject(fileName: "myWallet", object: myWallet)
         }
-//        else {
-//            print("value is: \(value!)")
-//        }
+        else {
+            print("value is: \(value!)")
+        }
     }
     
     func setTitle() {

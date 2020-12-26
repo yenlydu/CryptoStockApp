@@ -21,6 +21,10 @@
 "DateFormat" = "dd/MM/yyyy HH:mm:ss";
 "About" = "Over";
 "Buy" = "Kopen";
+"VariationsLastWeek" = "
+Variaties tijdens de afgelopen week :";
+"VariationsLastDay" = "Variaties tijdens de laatste dag :";
+
 "Never" = "Nooit";
 "LastSold" = "Laatste keer verkocht : ";
 "LastBought" = "Laatst gekocht : ";

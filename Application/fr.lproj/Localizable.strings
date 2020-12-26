@@ -11,6 +11,9 @@
 "English" = "Anglais,en";
 "Dutch" = "Néerlandais,nl";
 "Country" = "Pays";
+"VariationsLastWeek" = "Variations durant la semaine passée :";
+"VariationsLastDay" = "Variations durant le jour dernier :";
+
 "ChangeCurrency" = "Devise";
 "Parameters" = "Paramètres";
 "Welcome" = "Bonjour !";

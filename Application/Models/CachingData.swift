@@ -32,6 +32,7 @@ extension CachingData {
         do {
             let data = try NSKeyedArchiver.archivedData(withRootObject: object, requiringSecureCoding: false)//2
             try data.write(to: filePath)//3
+            print ("file saved")
             return true
         } catch {
             print("error is: \(error.localizedDescription)")//4
@@ -41,7 +42,7 @@ extension CachingData {
 
     func getObject(fileName: String) -> Any? {
         let filePath = self.getDirectoryPath().appendingPathComponent(fileName)//5
-//        print(filePath)
+        print(filePath)
 
         do {
             let data = try Data(contentsOf: filePath)//6

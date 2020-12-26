@@ -78,7 +78,7 @@ extension CalculatorViewController : CalculatorView {
 
         if self.storyboardId == "Buy" {
             wallet![self.cryptoName]! += Double(amount)
-
+            print (bought![self.cryptoName])
             bought![self.cryptoName] = frnlDate + "|" + dateString
             
             _ = self.saveObject(fileName: "transactionBoughtDate", object: bought!)

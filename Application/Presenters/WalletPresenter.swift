@@ -31,6 +31,7 @@ extension WalletViewController : WalletView {
 
         self.amount.text = "Wallet: " + String(format: "%.2f", wallet![cryptoClicked]!)
     }
+    
     func saveAmount() {
         let transactionSoldDate = self.getObject(fileName: "transactionSoldDate") as? Dictionary<String, String>
         let transactionBoughtDate = self.getObject(fileName: "transactionBoughtDate") as? Dictionary<String, String>

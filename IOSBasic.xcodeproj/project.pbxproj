@@ -24,7 +24,7 @@
 		186D29C5257D484200512EA9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186D29C4257D484200512EA9 /* HomeViewController.swift */; };
 		1874A85B258E16C700922074 /* CalculatorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1874A85A258E16C700922074 /* CalculatorPresenter.swift */; };
 		1874A869258E950B00922074 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1874A868258E950B00922074 /* CalculatorViewController.swift */; };
-		187C85312593A90000D52120 /* LabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187C85302593A90000D52120 /* LabelStyle.swift */; };
+		187B3F4D25978651008D729B /* WalletBoughtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187B3F4C25978651008D729B /* WalletBoughtViewController.swift */; };
 		187C853C2593E7AD00D52120 /* WalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187C853B2593E7AD00D52120 /* WalletViewController.swift */; };
 		187CCFBD258CB4520069B077 /* CryptocurrencyInformationsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187CCFBC258CB4520069B077 /* CryptocurrencyInformationsPresenter.swift */; };
 		1886D483258A1C00005C7CB0 /* ChangeLanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1886D482258A1C00005C7CB0 /* ChangeLanguageViewController.swift */; };
@@ -87,7 +87,7 @@
 		186D29C4257D484200512EA9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		1874A85A258E16C700922074 /* CalculatorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorPresenter.swift; sourceTree = "<group>"; };
 		1874A868258E950B00922074 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
-		187C85302593A90000D52120 /* LabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelStyle.swift; sourceTree = "<group>"; };
+		187B3F4C25978651008D729B /* WalletBoughtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletBoughtViewController.swift; sourceTree = "<group>"; };
 		187C853B2593E7AD00D52120 /* WalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewController.swift; sourceTree = "<group>"; };
 		187CCFBC258CB4520069B077 /* CryptocurrencyInformationsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptocurrencyInformationsPresenter.swift; sourceTree = "<group>"; };
 		1886D482258A1C00005C7CB0 /* ChangeLanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLanguageViewController.swift; sourceTree = "<group>"; };
@@ -210,6 +210,7 @@
 				1850756D25766BCD00AD4E18 /* CryptoInformationsController.swift */,
 				1867424A257437C400263972 /* MoneyViewController.swift */,
 				187C853B2593E7AD00D52120 /* WalletViewController.swift */,
+				187B3F4C25978651008D729B /* WalletBoughtViewController.swift */,
 				18E593E6258E9733002F9783 /* ParametersViewController.swift */,
 				1855A90525710DA300C508EC /* ProfileViewController.swift */,
 				186D29C4257D484200512EA9 /* HomeViewController.swift */,
@@ -250,7 +251,6 @@
 				188BEAA4258B8D4D003211D9 /* JSONParserStructurel.swift */,
 				186742482574378200263972 /* JSONParser.swift */,
 				18F645A9258F5AF800026A42 /* CachingData.swift */,
-				187C85302593A90000D52120 /* LabelStyle.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -524,7 +524,6 @@
 				1855A8D3257107E500C508EC /* AppDelegate.swift in Sources */,
 				18EAABE0258CC5D300B95974 /* TabBarPresenter.swift in Sources */,
 				188BEAA1258B8472003211D9 /* HomePresenter.swift in Sources */,
-				187C85312593A90000D52120 /* LabelStyle.swift in Sources */,
 				188BEAA7258B9892003211D9 /* ParametersPresenter.swift in Sources */,
 				1886D483258A1C00005C7CB0 /* ChangeLanguageViewController.swift in Sources */,
 				186742492574378200263972 /* JSONParser.swift in Sources */,
@@ -535,6 +534,7 @@
 				188BEAA9258B9ED6003211D9 /* MoneyPresenter.swift in Sources */,
 				1855A90625710DA300C508EC /* ProfileViewController.swift in Sources */,
 				1867424B257437C400263972 /* MoneyViewController.swift in Sources */,
+				187B3F4D25978651008D729B /* WalletBoughtViewController.swift in Sources */,
 				186D29C5257D484200512EA9 /* HomeViewController.swift in Sources */,
 				18E593E7258E9733002F9783 /* ParametersViewController.swift in Sources */,
 				18B17CDD25914D3800CA86AF /* DeviseController.swift in Sources */,

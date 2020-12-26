@@ -99,10 +99,14 @@ extension CryptoInformationsViewController : CryptocurrencyView {
         }
         self.priceOneDay.text = String(self.jsonArray[self.getCellClickedPosition()!].variationsPercentage.oneDay) + "%"
         self.priceOneWeek.text = String(self.jsonArray[self.getCellClickedPosition()!].variationsPercentage.oneWeek) + "%"
-        self.variationLastDay.numberOfLines = 2
-        self.variationsLastWeek.numberOfLines = 2
+        self.variationLastDay.numberOfLines = 3
+        self.variationsLastWeek.numberOfLines = 3
+        variationsLastWeek.lineBreakMode = NSLineBreakMode.byWordWrapping
+        variationLastDay.lineBreakMode = NSLineBreakMode.byWordWrapping
+        variationsLastWeek.font = variationsLastWeek.font.withSize(16)
+        variationLastDay.font = variationLastDay.font.withSize(16)
 
-        self.variationLastDay.text = "Variations during last day :"
-        self.variationsLastWeek.text = "Variations during last week :"
+        self.variationLastDay.text = "VariationsLastDay".localized()
+        self.variationsLastWeek.text = "VariationsLastWeek".localized()
     }
 }
