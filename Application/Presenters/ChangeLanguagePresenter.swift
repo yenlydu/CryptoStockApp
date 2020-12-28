@@ -13,14 +13,24 @@ class LanguagePresenter {
     weak var view: ChangeLanguagePresenterView?
     @IBOutlet var parametersView: UIPickerView!
     var dataArray: Array<String> = []
-
+    var key : String = "Languages"
+    var defaultKey : String = "fr"
     init(with view : ChangeLanguagePresenterView) {
         self.view = view
     }
+    
+    func getDefaultLanguage() -> String {
+        return self.defaultKey
+    }
+    
+    func getKey() -> String {
+        return self.key
+    }
+    
     private func splitLanguageLocalized() {
-        dataArray.append("French".localized())
-        dataArray.append("English".localized())
-        dataArray.append("Dutch".localized())
+        dataArray.append("French".localizableString(str: UserDefaults.standard.string(forKey: "Languages")!))
+        dataArray.append("English".localizableString(str: UserDefaults.standard.string(forKey: "Languages")!))
+        dataArray.append("Dutch".localizableString(str: UserDefaults.standard.string(forKey: "Languages")!))
     }
 
     func getLanguages() -> Array<String> {
@@ -34,7 +44,12 @@ class LanguagePresenter {
 }
 
 protocol ChangeLanguagePresenterView: AnyObject {
+    func splitLanguageLocalized()
 }
 
 extension ChangeLanguageViewController: ChangeLanguagePresenterView {
+    func splitLanguageLocalized() {
+        
+    }
+
 }

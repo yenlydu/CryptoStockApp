@@ -74,18 +74,26 @@ extension CryptoInformationsViewController : CryptocurrencyView {
     }
 
     func setInformations(cellClickedName: String) {
-        let tempAboutCellClicked = "About." + cellClickedName.replacingOccurrences(of: " ", with: "")
         
-        self.bitcoinInformation.text = tempAboutCellClicked.localized()
+        setBitcoinAbout(cellClickedName: cellClickedName)
+        setVariationsLabel()
+        setPriceVariations()
+        setLabel(cellClickedName: cellClickedName)
+    }
+    
+    func setBitcoinAbout(cellClickedName: String) {
+        let tempAboutCellClicked = "About".localizableString(str: UserDefaults.standard.string(forKey: "Languages")!) + "." + cellClickedName.replacingOccurrences(of: " ", with: "")
+
+        self.bitcoinInformation.text = tempAboutCellClicked.localizableString(str: UserDefaults.standard.string(forKey: "Languages")!)
         self.bitcoinInformation.font = bitcoinInformation.font.withSize(20)
         self.bitcoinInformation.sizeToFit()
         self.bitcoinInformation.adjustsFontSizeToFitWidth = true
         self.bitcoinInformation.minimumScaleFactor = 0.5
-        self.bitcoinInformation.numberOfLines = 0
-        
-        self.aboutLabel.font = UIFont.boldSystemFont(ofSize: 22.0)
-        self.aboutLabel.text = "About".localized() + " " + cellClickedName
-        
+        self.bitcoinInformation.numberOfLines = 4
+
+    }
+    
+    func setPriceVariations() {
         if (self.jsonArray[self.getCellClickedPosition()!].variationsPercentage.oneDay < 0) {
             self.priceOneDay.textColor = UIColor.red
         } else {
@@ -99,14 +107,25 @@ extension CryptoInformationsViewController : CryptocurrencyView {
         }
         self.priceOneDay.text = String(self.jsonArray[self.getCellClickedPosition()!].variationsPercentage.oneDay) + "%"
         self.priceOneWeek.text = String(self.jsonArray[self.getCellClickedPosition()!].variationsPercentage.oneWeek) + "%"
+        
+    }
+    
+    func setVariationsLabel() {
         self.variationLastDay.numberOfLines = 3
         self.variationsLastWeek.numberOfLines = 3
-        variationsLastWeek.lineBreakMode = NSLineBreakMode.byWordWrapping
-        variationLastDay.lineBreakMode = NSLineBreakMode.byWordWrapping
-        variationsLastWeek.font = variationsLastWeek.font.withSize(16)
-        variationLastDay.font = variationLastDay.font.withSize(16)
+        self.variationsLastWeek.lineBreakMode = NSLineBreakMode.byWordWrapping
+        self.variationLastDay.lineBreakMode = NSLineBreakMode.byWordWrapping
+        self.variationsLastWeek.font = variationsLastWeek.font.withSize(16)
+        self.variationLastDay.font = variationLastDay.font.withSize(16)
+        self.variationLastDay.text = "VariationsLastDay".localizableString(str: UserDefaults.standard.string(forKey: "Languages")!)
+        self.variationsLastWeek.text = "VariationsLastWeek".localizableString(str: UserDefaults.standard.string(forKey: "Languages")!)
 
-        self.variationLastDay.text = "VariationsLastDay".localized()
-        self.variationsLastWeek.text = "VariationsLastWeek".localized()
+    }
+    
+    func setLabel(cellClickedName: String) {
+        self.aboutLabel.font = UIFont.boldSystemFont(ofSize: 22.0)
+        self.aboutLabel.text = "About".localizableString(str: UserDefaults.standard.string(forKey: "Languages")!)
+ + " " + cellClickedName
+
     }
 }

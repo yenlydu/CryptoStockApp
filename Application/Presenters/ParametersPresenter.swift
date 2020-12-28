@@ -27,7 +27,7 @@ protocol ParametersView : AnyObject{
 
 extension ParametersViewController: ParametersView {
     func setLabels() {
-        labelCountry.text = "Country".localized()
-        labelCurrency.text = "ChangeCurrency".localized()
+        labelCountry.text = "Country".localizableString(str: UserDefaults.standard.string(forKey: "Languages")!)
+        labelCurrency.text = "ChangeCurrency".localizableString(str: UserDefaults.standard.string(forKey: "Languages")!)
     }
 }

@@ -56,7 +56,7 @@ protocol MoneyView {
 
 extension MoneyViewController : MoneyView {
     func setTitle() {
-        title = "TabBarController.Prices".localized()
+        title = "TabBarController.Prices".localizableString(str: UserDefaults.standard.string(forKey: "Languages")!)
     }
     func tableViewLayout() {
         self.tableView.rowHeight = UITableView.automaticDimension

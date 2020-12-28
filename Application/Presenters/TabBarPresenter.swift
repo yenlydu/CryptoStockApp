@@ -79,10 +79,12 @@ protocol TabBarView {
 
 extension TabBarViewController : TabBarView {
     func setTitle() {
-        let tabBarName : [String] = ["TabBarController.Home", "TabBarController.Prices", "TabBarController.Profile"]
+        let tabBarName : [String] = ["TabBarController.Prices", "TabBarController.Profile"]
         self.tabbar.items?.enumerated().forEach {
             index, item in
-            item.title = tabBarName[index].localized()
+            UserDefaults.standard.set(Locale.current.languageCode, forKey: "Languages")
+
+            item.title = tabBarName[index].localizableString(str: UserDefaults.standard.string(forKey: "Languages")!)
         }
     }
 }

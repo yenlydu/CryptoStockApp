@@ -43,10 +43,11 @@ extension CalculatorViewController : CalculatorView {
 
     func setTitle() {
         if (self.storyboardId == "Buy") {
-            self.buyTitle.text = "Buy".localized()
+            self.buyTitle.text = "Buy".localizableString(str: UserDefaults.standard.string(forKey: "Languages")!)
             self.buyTitle.backgroundColor = .lightGray
         } else if (self.storyboardId == "Sell") {
-            self.sellTitle.text = "Sell".localized()
+            self.sellTitle.text = "Sell".localizableString(str: UserDefaults.standard.string(forKey: "Languages")!)
+
             self.sellTitle.backgroundColor = .lightGray
         }
     }
@@ -78,7 +79,6 @@ extension CalculatorViewController : CalculatorView {
 
         if self.storyboardId == "Buy" {
             wallet![self.cryptoName]! += Double(amount)
-            print (bought![self.cryptoName])
             bought![self.cryptoName] = frnlDate + "|" + dateString
             
             _ = self.saveObject(fileName: "transactionBoughtDate", object: bought!)
@@ -91,8 +91,8 @@ extension CalculatorViewController : CalculatorView {
             _ = self.saveObject(fileName: "myWallet", object: wallet!)
             _ = self.saveObject(fileName: "transactionSoldDate", object: sold!)
         }
-        for (key, value) in wallet! {
-            print("key is - \(key) and value is - \(value)")
-        }
+//        for (key, value) in wallet! {
+//            print("key is - \(key) and value is - \(value)")
+//        }
     }
 }

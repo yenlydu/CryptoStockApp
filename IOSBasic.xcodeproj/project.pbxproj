@@ -21,7 +21,6 @@
 		186D29BC257D436300512EA9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 186D29BE257D436300512EA9 /* Localizable.strings */; };
 		186D29C1257D43BD00512EA9 /* LocalizeLanguages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186D29C0257D43BD00512EA9 /* LocalizeLanguages.swift */; };
 		186D29C3257D46B000512EA9 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186D29C2257D46B000512EA9 /* TabBarViewController.swift */; };
-		186D29C5257D484200512EA9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186D29C4257D484200512EA9 /* HomeViewController.swift */; };
 		1874A85B258E16C700922074 /* CalculatorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1874A85A258E16C700922074 /* CalculatorPresenter.swift */; };
 		1874A869258E950B00922074 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1874A868258E950B00922074 /* CalculatorViewController.swift */; };
 		187B3F4D25978651008D729B /* WalletBoughtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187B3F4C25978651008D729B /* WalletBoughtViewController.swift */; };
@@ -31,7 +30,6 @@
 		1889014F2594D3B900C074C7 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1889014E2594D3B900C074C7 /* Charts.framework */; };
 		188901512594D3BC00C074C7 /* Pods_IOSBasic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 188901502594D3BC00C074C7 /* Pods_IOSBasic.framework */; };
 		188BEA9D258B7EF0003211D9 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188BEA9C258B7EF0003211D9 /* ProfilePresenter.swift */; };
-		188BEAA1258B8472003211D9 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188BEAA0258B8472003211D9 /* HomePresenter.swift */; };
 		188BEAA5258B8D4D003211D9 /* JSONParserStructurel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188BEAA4258B8D4D003211D9 /* JSONParserStructurel.swift */; };
 		188BEAA7258B9892003211D9 /* ParametersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188BEAA6258B9892003211D9 /* ParametersPresenter.swift */; };
 		188BEAA9258B9ED6003211D9 /* MoneyPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188BEAA8258B9ED6003211D9 /* MoneyPresenter.swift */; };
@@ -84,7 +82,6 @@
 		186D29BF257D436900512EA9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		186D29C0257D43BD00512EA9 /* LocalizeLanguages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizeLanguages.swift; sourceTree = "<group>"; };
 		186D29C2257D46B000512EA9 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
-		186D29C4257D484200512EA9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		1874A85A258E16C700922074 /* CalculatorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorPresenter.swift; sourceTree = "<group>"; };
 		1874A868258E950B00922074 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		187B3F4C25978651008D729B /* WalletBoughtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletBoughtViewController.swift; sourceTree = "<group>"; };
@@ -95,7 +92,6 @@
 		188901502594D3BC00C074C7 /* Pods_IOSBasic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_IOSBasic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		188BEA98258B6FAF003211D9 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		188BEA9C258B7EF0003211D9 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
-		188BEAA0258B8472003211D9 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		188BEAA4258B8D4D003211D9 /* JSONParserStructurel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParserStructurel.swift; sourceTree = "<group>"; };
 		188BEAA6258B9892003211D9 /* ParametersPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParametersPresenter.swift; sourceTree = "<group>"; };
 		188BEAA8258B9ED6003211D9 /* MoneyPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyPresenter.swift; sourceTree = "<group>"; };
@@ -213,7 +209,6 @@
 				187B3F4C25978651008D729B /* WalletBoughtViewController.swift */,
 				18E593E6258E9733002F9783 /* ParametersViewController.swift */,
 				1855A90525710DA300C508EC /* ProfileViewController.swift */,
-				186D29C4257D484200512EA9 /* HomeViewController.swift */,
 				186D29C2257D46B000512EA9 /* TabBarViewController.swift */,
 				1874A868258E950B00922074 /* CalculatorViewController.swift */,
 				18B17CDC25914D3800CA86AF /* DeviseController.swift */,
@@ -232,15 +227,14 @@
 		188BEA9B258B7EC0003211D9 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
-				187CCFBC258CB4520069B077 /* CryptocurrencyInformationsPresenter.swift */,
-				188BEA9C258B7EF0003211D9 /* ProfilePresenter.swift */,
-				188BEAA6258B9892003211D9 /* ParametersPresenter.swift */,
-				188BEAA0258B8472003211D9 /* HomePresenter.swift */,
-				188BEAA8258B9ED6003211D9 /* MoneyPresenter.swift */,
 				188BEAAA258BA0BE003211D9 /* ChangeLanguagePresenter.swift */,
+				187CCFBC258CB4520069B077 /* CryptocurrencyInformationsPresenter.swift */,
+				188BEAA8258B9ED6003211D9 /* MoneyPresenter.swift */,
+				18C582D52594D81D00F82FDD /* WalletPresenter.swift */,
+				188BEAA6258B9892003211D9 /* ParametersPresenter.swift */,
+				188BEA9C258B7EF0003211D9 /* ProfilePresenter.swift */,
 				18EAABDF258CC5D300B95974 /* TabBarPresenter.swift */,
 				1874A85A258E16C700922074 /* CalculatorPresenter.swift */,
-				18C582D52594D81D00F82FDD /* WalletPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -523,7 +517,6 @@
 				186D29C1257D43BD00512EA9 /* LocalizeLanguages.swift in Sources */,
 				1855A8D3257107E500C508EC /* AppDelegate.swift in Sources */,
 				18EAABE0258CC5D300B95974 /* TabBarPresenter.swift in Sources */,
-				188BEAA1258B8472003211D9 /* HomePresenter.swift in Sources */,
 				188BEAA7258B9892003211D9 /* ParametersPresenter.swift in Sources */,
 				1886D483258A1C00005C7CB0 /* ChangeLanguageViewController.swift in Sources */,
 				186742492574378200263972 /* JSONParser.swift in Sources */,
@@ -535,7 +528,6 @@
 				1855A90625710DA300C508EC /* ProfileViewController.swift in Sources */,
 				1867424B257437C400263972 /* MoneyViewController.swift in Sources */,
 				187B3F4D25978651008D729B /* WalletBoughtViewController.swift in Sources */,
-				186D29C5257D484200512EA9 /* HomeViewController.swift in Sources */,
 				18E593E7258E9733002F9783 /* ParametersViewController.swift in Sources */,
 				18B17CDD25914D3800CA86AF /* DeviseController.swift in Sources */,
 				1855A8D5257107E500C508EC /* SceneDelegate.swift in Sources */,

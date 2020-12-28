@@ -10,14 +10,13 @@ import UIKit
 class TabBarViewController: UITabBarController {
     @IBOutlet  weak var tabbar: UITabBar!
     lazy var presenter = TabBarPresenter(with: self)
-
-    override func viewDidLoad() {
-        
-        super.viewDidLoad()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         self.presenter.setTitle()
-        let navController = self.viewControllers![2] as! UINavigationController
+
+        let navController = self.viewControllers![1] as! UINavigationController
         let vc = navController.topViewController as! ProfileViewController
         vc.crypto = self.presenter.getJsonArray()
-        
     }
 }

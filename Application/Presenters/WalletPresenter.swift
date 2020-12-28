@@ -48,11 +48,11 @@ extension WalletViewController : WalletView {
         }
 
         if (Locale.current.languageCode == "en") {
-            self.lastSoldUpdate.text = "LastSold".localized() + tokenSold[1]
-            self.lastBoughtUpdate.text = "LastBought".localized() + tokenBought[1]
+            self.lastSoldUpdate.text = "LastSold".localizableString(str: UserDefaults.standard.string(forKey: "Languages")!) + tokenSold[1]
+            self.lastBoughtUpdate.text = "LastBought".localizableString(str: UserDefaults.standard.string(forKey: "Languages")!) + tokenBought[1]
         } else {
-            self.lastSoldUpdate.text = "LastSold".localized() + tokenSold[0]
-            self.lastBoughtUpdate.text = "LastBought".localized() + tokenBought[0]
+            self.lastSoldUpdate.text = "LastSold".localizableString(str: UserDefaults.standard.string(forKey: "Languages")!) + tokenSold[0]
+            self.lastBoughtUpdate.text = "LastBought".localizableString(str: UserDefaults.standard.string(forKey: "Languages")!) + tokenBought[0]
         }
 
     }

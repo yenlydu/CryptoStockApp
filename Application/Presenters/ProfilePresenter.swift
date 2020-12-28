@@ -36,7 +36,7 @@ protocol ProfileView : AnyObject {
 
 extension ProfileViewController : ProfileView {
     func setLabelDisplay() {
-        self.text.text = "Wallet".localized()
+        self.text.text = "Wallet".localizableString(str: UserDefaults.standard.string(forKey: "Languages")!)
         self.text.textAlignment = .center
         self.text.borderStyle = .none
         self.text.layer.cornerRadius = 14

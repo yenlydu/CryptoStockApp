@@ -42,7 +42,7 @@ extension CachingData {
 
     func getObject(fileName: String) -> Any? {
         let filePath = self.getDirectoryPath().appendingPathComponent(fileName)//5
-        print(filePath)
+//        print(filePath)
 
         do {
             let data = try Data(contentsOf: filePath)//6

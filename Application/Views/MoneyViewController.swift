@@ -15,11 +15,13 @@ class MoneyViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var fetchingmore = false
     lazy var presenter = MoneyPresenter(with: self)
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         tableView.delegate = self
         tableView.dataSource = self
         self.presenter.tableViewLayout()
+
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
