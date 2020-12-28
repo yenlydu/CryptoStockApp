@@ -36,7 +36,7 @@ class WalletBoughtViewController: UIViewController, CachingData {
             tokenSold = transactionSoldDate![cryptoClickedInformations[0]]!.components(separatedBy: "|")
         }
 
-        if (Locale.current.languageCode == "en") {
+        if (UserDefaults.standard.string(forKey: "Languages")! == "en") {
             
             self.lastSoldUpdate.text = "LastSold".localizableString(str: UserDefaults.standard.string(forKey: "Languages")!) + tokenSold[1]
             self.lastBoughtUpdate.text = "LastBought".localizableString(str: UserDefaults.standard.string(forKey: "Languages")!) + tokenBought[1]

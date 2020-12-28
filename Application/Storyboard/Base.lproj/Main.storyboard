@@ -265,15 +265,29 @@
                                     <action selector="button1:" destination="7qt-Ni-x2V" eventType="touchUpInside" id="VOL-tZ-hOE"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E1O-dF-jNd">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E1O-dF-jNd">
                                 <rect key="frame" x="111" y="163" width="192" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="192" id="BRV-qi-Ull"/>
+                                    <constraint firstAttribute="height" constant="34" id="kuP-S1-c3R"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r8C-oS-XiN">
+                                <rect key="frame" x="328" y="169.5" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XEg-y1-9WS"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="E1O-dF-jNd" firstAttribute="leading" secondItem="XEg-y1-9WS" secondAttribute="leading" constant="111" id="Qvh-Z1-slg"/>
+                            <constraint firstItem="E1O-dF-jNd" firstAttribute="top" secondItem="XEg-y1-9WS" secondAttribute="top" constant="107" id="zEF-tq-hz7"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ONn-4m-4k0">
                         <nil key="title"/>
@@ -292,6 +306,7 @@
                     <connections>
                         <outlet property="amountTextField" destination="E1O-dF-jNd" id="TEU-FW-rWf"/>
                         <outlet property="buyTitle" destination="T8h-Zj-gC6" id="hcp-11-Ha1"/>
+                        <outlet property="devise" destination="r8C-oS-XiN" id="I9S-Pq-HAG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XjL-bn-IVz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -794,9 +809,12 @@
                                     <action selector="button1:" destination="07j-as-v9h" eventType="touchUpInside" id="mAl-rm-gJS"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="usI-0T-26N">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="usI-0T-26N">
                                 <rect key="frame" x="111" y="180" width="192" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="9bD-46-VkC"/>
+                                    <constraint firstAttribute="width" constant="192" id="rHo-SN-1fS"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -840,9 +858,20 @@
                                     <action selector="buttonRm:" destination="07j-as-v9h" eventType="touchUpInside" id="yk7-AR-6h2"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K3a-Tc-BbL">
+                                <rect key="frame" x="326" y="180" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XnV-9Z-3h7"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="usI-0T-26N" firstAttribute="leading" secondItem="XnV-9Z-3h7" secondAttribute="leading" constant="111" id="YuD-HG-pgA"/>
+                            <constraint firstItem="usI-0T-26N" firstAttribute="top" secondItem="XnV-9Z-3h7" secondAttribute="top" constant="124" id="taS-dx-zqd"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="aPK-o8-hNd">
                         <textField key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Sell" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="EnC-QZ-unq">
@@ -859,6 +888,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="amountTextField" destination="usI-0T-26N" id="KlT-P1-EqC"/>
+                        <outlet property="devise" destination="K3a-Tc-BbL" id="DKU-0v-Whg"/>
                         <outlet property="sellTitle" destination="EnC-QZ-unq" id="9xd-V0-vvw"/>
                     </connections>
                 </viewController>

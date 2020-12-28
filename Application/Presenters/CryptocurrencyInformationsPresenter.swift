@@ -12,7 +12,7 @@ class CyptocurrencyInformationPresenter {
     var view : CryptocurrencyView?
     var buyIdentifier : String = "BuyAmountIdentifier"
     var sellIdentifier : String = "SellAmountIdentifier"
-    var lineChartLabel: String = "Variations".localizableString(str: UserDefaults.standard.string(forKey: "Languages")!)
+    var lineChartLabel: String = "Variations".localizableString(str: UserDefaults.standard.string(forKey: "Languages")!) + "Currency".localizableString(str: UserDefaults.standard.string(forKey: "Languages")!)
     
     init(with view: CryptocurrencyView) {
         self.view = view
@@ -82,8 +82,7 @@ extension CryptoInformationsViewController : CryptocurrencyView {
     }
     
     func setBitcoinAbout(cellClickedName: String) {
-        let tempAboutCellClicked = "About".localizableString(str: UserDefaults.standard.string(forKey: "Languages")!) + "." + cellClickedName.replacingOccurrences(of: " ", with: "")
-
+        let tempAboutCellClicked = "About" + "." + cellClickedName.replacingOccurrences(of: " ", with: "")
         self.bitcoinInformation.text = tempAboutCellClicked.localizableString(str: UserDefaults.standard.string(forKey: "Languages")!)
         self.bitcoinInformation.font = bitcoinInformation.font.withSize(20)
         self.bitcoinInformation.sizeToFit()

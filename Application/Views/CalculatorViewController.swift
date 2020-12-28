@@ -9,6 +9,7 @@ import UIKit
 
 class CalculatorViewController: UIViewController, CachingData {
     @IBOutlet weak  var amountTextField: UITextField!
+    @IBOutlet var devise: UILabel!
     @IBOutlet var sellTitle: UITextField!
     @IBOutlet var buyTitle: UITextField!
     lazy var presenter = CalculatorPresenter(with: self)
@@ -18,6 +19,8 @@ class CalculatorViewController: UIViewController, CachingData {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.presenter.changeAppearance()
+        devise.text = "Currency".localizableString(str: UserDefaults.standard.string(forKey: "Languages")!)
+
     }
     
     @IBAction func doneButton(_ sender: Any) {
