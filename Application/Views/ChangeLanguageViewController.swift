@@ -29,6 +29,8 @@ class ChangeLanguageViewController : UIViewController, UIPickerViewDataSource, U
         let str : String = self.selectedLanguage?[1] ?? self.presenter.getDefaultLanguage()
         UserDefaults.standard.set(str, forKey: self.presenter.getKey())
         UIView.appearance().semanticContentAttribute = .forceLeftToRight
+        self.navigationController?.popToRootViewController(animated: true)
+
     }
     
 

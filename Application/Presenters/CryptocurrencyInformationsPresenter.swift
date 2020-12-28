@@ -12,7 +12,7 @@ class CyptocurrencyInformationPresenter {
     var view : CryptocurrencyView?
     var buyIdentifier : String = "BuyAmountIdentifier"
     var sellIdentifier : String = "SellAmountIdentifier"
-    var lineChartLabel: String = "Variations"
+    var lineChartLabel: String = "Variations".localizableString(str: UserDefaults.standard.string(forKey: "Languages")!)
     
     init(with view: CryptocurrencyView) {
         self.view = view
