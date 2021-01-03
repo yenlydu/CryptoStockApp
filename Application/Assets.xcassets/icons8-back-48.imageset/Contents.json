@@ -1,15 +1,12 @@
 {
   "images" : [
     {
-      "filename" : "51TX78DVR7L._AC_SY445_.jpg",
+      "filename" : "icons8-back-48.png",
       "idiom" : "universal"
     }
   ],
   "info" : {
     "author" : "xcode",
     "version" : 1
-  },
-  "properties" : {
-    "template-rendering-intent" : "original"
   }
 }

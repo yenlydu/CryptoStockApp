@@ -11,11 +11,12 @@ class ParametersViewController : UITableViewController {
 
     @IBOutlet var labelCountry: UILabel!
     @IBOutlet var labelCurrency: UILabel!
-    lazy var presenter = ParametersPresenter(with: self)
-    @IBOutlet var parametersTableView: UITableView!
+    private lazy var presenter = ParametersPresenter(with: self)
+    @IBOutlet private var parametersTableView: UITableView!
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        self.presenter.setLabels()
+        presenter.setLabels()
 
     }
 }

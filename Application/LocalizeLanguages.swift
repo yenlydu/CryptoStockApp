@@ -11,8 +11,9 @@ import Foundation
 extension String {
 //<
     func localizableString(str: String) -> String {
-        let path = Bundle.main.path(forResource: str, ofType: "lproj")
-        let bundle = Bundle(path: path!)
-        return NSLocalizedString(self, tableName: nil, bundle: bundle!, value: "", comment: "")
+        guard let path = Bundle.main.path(forResource: str, ofType: "lproj"), let bundle = Bundle(path: path) else {
+            fatalError("File not found")
+       }
+       return NSLocalizedString(self, tableName: nil, bundle: bundle, value: "", comment: "")
     }
 }

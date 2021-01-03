@@ -13,7 +13,8 @@
 "Country" = "Pays";
 "VariationsLastWeek" = "Variations durant la semaine passée :";
 "VariationsLastDay" = "Variations durant le jour dernier :";
-
+"Never" = "Jamais";
+"Amount" = "montant";
 "Variations" = "Variations en ";
 "ChangeCurrency" = "Devise";
 "Parameters" = "Paramètres";

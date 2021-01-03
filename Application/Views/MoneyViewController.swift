@@ -9,31 +9,28 @@ import Foundation
 import UIKit
 
 class MoneyViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
     @IBOutlet weak var tableView: UITableView!
     var cellClicked : String = "nil"
     var fetchingmore = false
     lazy var presenter = MoneyPresenter(with: self)
 
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         tableView.delegate = self
         tableView.dataSource = self
         self.presenter.tableViewLayout()
-
     }
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         cellClicked = self.presenter.getJsonArrayName(indexRow: indexPath.row)
         performSegue(withIdentifier: self.presenter.getSegueIdentifier(), sender: self)
     }
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.presenter.getJsonArray().count
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == self.presenter.getSegueIdentifier() {
             let vc = segue.destination as! CryptoInformationsViewController
@@ -41,6 +38,7 @@ class MoneyViewController: UIViewController, UITableViewDelegate, UITableViewDat
             vc.jsonArray = self.presenter.getJsonArray()
         }
     }
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCell(withIdentifier: self.presenter.getCellIdentifier())
         if cell == nil {

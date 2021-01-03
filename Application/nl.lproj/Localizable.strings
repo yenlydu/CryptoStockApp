@@ -18,6 +18,8 @@
 "TabBarController.Profile" = "Profiel";
 "TabBarController.Home" = "huis";
 "Currency" = "€";
+"Amount" = "bedrag";
+"Never" = "Nooit";
 "Variations" = "Variaties in ";
 "DateFormat" = "dd/MM/yyyy HH:mm:ss";
 "About" = "Over";

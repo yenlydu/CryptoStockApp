@@ -9,7 +9,6 @@ import UIKit
 import Charts
 
 class CryptoInformationsViewController: UIViewController, CachingData, ChartViewDelegate {
-
     @IBOutlet var lineChart: LineChartView!
     @IBOutlet weak var bitcoinInformation: UILabel!
     @IBOutlet weak var aboutLabel: UILabel!
@@ -18,10 +17,8 @@ class CryptoInformationsViewController: UIViewController, CachingData, ChartView
     lazy var presenter = CyptocurrencyInformationPresenter(with: self)
     @IBOutlet var priceOneDay: UILabel!
     @IBOutlet var priceOneWeek: UILabel!
-
     @IBOutlet var variationsLastWeek: UILabel!
     @IBOutlet var variationLastDay: UILabel!
-    
     var cellClicked: String = ""
     var jsonArray : [Cryptocurrency] = []
     var variations : VariationsLastWeek?

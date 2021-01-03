@@ -57,7 +57,7 @@ class TabBarPresenter : CachingData {
     func saveWallet() {
         let value = self.getObject(fileName: "myWallet") as? Dictionary<String, Double>
         if case Optional<Any>.none = value {
-            let myWallet = ["Bitcoin" : Double(0), "Ethereum" : Double(0), "Litecoin" : Double(0), "Tether" : Double(0), "Chainlink" : Double(0), "Bitcoin Cash" : Double(0), "Polkadot" : Double(0), "Binance Coin" : Double(0)]
+            let myWallet = ["Bitcoin" : Double(0), "Ethereum" : Double(0), "Litecoin" : Double(00), "Tether" : Double(0), "Chainlink" : Double(0), "Bitcoin Cash" : Double(0), "Polkadot" : Double(0), "Binance Coin" : Double(0)]
             _ = self.saveObject(fileName: "myWallet", object: myWallet)
         }
         else {
@@ -78,12 +78,17 @@ protocol TabBarView {
 }
 
 extension TabBarViewController : TabBarView {
+
     func setTitle() {
         let tabBarName : [String] = ["TabBarController.Prices", "TabBarController.Profile"]
+        print ("Currency".localizableString(str: UserDefaults.standard.string(forKey: "Languages")!))
+        UserDefaults.standard.set("Currency".localizableString(str: Locale.current.languageCode!), forKey: "Currency")
+        print ("default  = ", UserDefaults.standard.string(forKey: "Currency")!)
+        UserDefaults.standard.set(Locale.current.languageCode, forKey: "Languages")
+
         self.tabbar.items?.enumerated().forEach {
             index, item in
-            UserDefaults.standard.set(Locale.current.languageCode, forKey: "Languages")
-
+ 
             item.title = tabBarName[index].localizableString(str: UserDefaults.standard.string(forKey: "Languages")!)
         }
     }

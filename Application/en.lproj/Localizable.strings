@@ -15,12 +15,14 @@
 "Parameters" = "Parameters";
 "Welcome" = "Welcome !";
 "Variations" = "Variations in ";
+"Never" = "Never";
 "TabBarController.Prices" = "Prices";
+"Amount" = "amount";
 "TabBarController.Profile" = "Profile";
 "TabBarController.Home" = "Home";
 "Currency" = "$";
 "VariationsLastWeek" = "Variations during last week :";
-"VariationsLastDay" = "Variations during ast day :";
+"VariationsLastDay" = "Variations during last day :";
 "Buy" = "Buy";
 "DateFormat" = "MM/dd/yyyy HH:mm:ss";
 "Never" = "Never";
