@@ -568,7 +568,7 @@
         <scene sceneID="SdI-Fy-0HM">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bwh-Vg-Bg3" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" image="person" catalog="system" id="GWi-nU-ouf"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="icons8-name-35" id="GWi-nU-ouf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="aIv-go-zuj">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -591,26 +591,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rnj-dh-MtB">
-                                <rect key="frame" x="0.0" y="161" width="346" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rnj-dh-MtB">
+                                <rect key="frame" x="71" y="161" width="272" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="346" id="Ef2-A7-1Sn"/>
-                                    <constraint firstAttribute="height" constant="21" id="Xnm-BO-HpX"/>
+                                    <constraint firstAttribute="width" constant="272" id="DmT-VG-0Wh"/>
+                                    <constraint firstAttribute="height" constant="50" id="f9G-hE-OA4"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LastBoughtUpdate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SH2-IP-wKs">
-                                <rect key="frame" x="9" y="267" width="353" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LastBoughtUpdate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SH2-IP-wKs">
+                                <rect key="frame" x="0.0" y="271" width="414" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="K6G-ih-9bL"/>
+                                    <constraint firstAttribute="width" constant="414" id="sBC-eS-nch"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LastSoldUpdate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nMS-ic-HQs">
-                                <rect key="frame" x="9" y="322" width="362" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LastSoldUpdate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nMS-ic-HQs">
+                                <rect key="frame" x="0.0" y="381" width="414" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="NTW-0O-5Xf"/>
+                                    <constraint firstAttribute="height" constant="50" id="ObL-Fb-Vej"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -619,9 +625,18 @@
                         <viewLayoutGuide key="safeArea" id="pJ5-y8-Lql"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="rnj-dh-MtB" firstAttribute="leading" secondItem="pJ5-y8-Lql" secondAttribute="leading" id="23N-6q-sGc"/>
-                            <constraint firstItem="rnj-dh-MtB" firstAttribute="top" secondItem="pJ5-y8-Lql" secondAttribute="top" constant="73" id="57N-mF-t1s"/>
-                            <constraint firstItem="pJ5-y8-Lql" firstAttribute="trailing" secondItem="rnj-dh-MtB" secondAttribute="trailing" constant="68" id="sFU-QO-Qng"/>
+                            <constraint firstItem="nMS-ic-HQs" firstAttribute="leading" secondItem="pJ5-y8-Lql" secondAttribute="leading" id="03i-40-vae"/>
+                            <constraint firstItem="SH2-IP-wKs" firstAttribute="trailing" secondItem="pJ5-y8-Lql" secondAttribute="trailing" id="GSt-3w-xwI"/>
+                            <constraint firstItem="pJ5-y8-Lql" firstAttribute="trailing" secondItem="nMS-ic-HQs" secondAttribute="trailing" id="H24-IC-DCv"/>
+                            <constraint firstItem="rnj-dh-MtB" firstAttribute="top" secondItem="pJ5-y8-Lql" secondAttribute="top" constant="73" id="Jdx-4G-4kD"/>
+                            <constraint firstItem="pJ5-y8-Lql" firstAttribute="trailing" secondItem="rnj-dh-MtB" secondAttribute="trailing" constant="71" id="QK0-j4-QIl"/>
+                            <constraint firstItem="rnj-dh-MtB" firstAttribute="centerX" secondItem="gnz-y2-pkA" secondAttribute="centerX" id="Vu7-Sv-Gm0"/>
+                            <constraint firstItem="SH2-IP-wKs" firstAttribute="leading" secondItem="pJ5-y8-Lql" secondAttribute="leading" id="YJ2-aW-P1h"/>
+                            <constraint firstItem="rnj-dh-MtB" firstAttribute="leading" secondItem="pJ5-y8-Lql" secondAttribute="leading" constant="71" id="aIl-zD-Hl2"/>
+                            <constraint firstItem="nMS-ic-HQs" firstAttribute="top" secondItem="SH2-IP-wKs" secondAttribute="bottom" constant="60" id="bgM-U9-GiO"/>
+                            <constraint firstItem="pJ5-y8-Lql" firstAttribute="bottom" secondItem="nMS-ic-HQs" secondAttribute="bottom" constant="317" id="lQJ-4S-gq1"/>
+                            <constraint firstItem="SH2-IP-wKs" firstAttribute="top" secondItem="rnj-dh-MtB" secondAttribute="bottom" constant="60" id="tIC-CH-944"/>
+                            <constraint firstItem="SH2-IP-wKs" firstAttribute="top" secondItem="rnj-dh-MtB" secondAttribute="bottom" constant="60" id="x0U-BD-v9K"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="R5W-l1-3Xi"/>
@@ -639,7 +654,7 @@
         <scene sceneID="BGn-Qn-rL2">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7sn-hd-7QD" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Prices" image="dollarsign.circle" catalog="system" id="EmG-h3-P5I"/>
+                    <tabBarItem key="tabBarItem" title="Prices" image="icons8-bitcoin-35" id="EmG-h3-P5I"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="OH8-4s-f1N">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -1049,7 +1064,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="dollarsign.circle" catalog="system" width="128" height="121"/>
         <image name="icons8-0-100" width="100" height="100"/>
         <image name="icons8-1-100" width="100" height="100"/>
         <image name="icons8-2-100" width="100" height="100"/>
@@ -1061,11 +1075,12 @@
         <image name="icons8-8-100" width="100" height="100"/>
         <image name="icons8-9-100" width="100" height="100"/>
         <image name="icons8-back-48" width="48" height="48"/>
+        <image name="icons8-bitcoin-35" width="35" height="35"/>
         <image name="icons8-buy-48" width="48" height="48"/>
+        <image name="icons8-name-35" width="35" height="35"/>
         <image name="icons8-tune-48" width="48" height="48"/>
         <image name="output-onlinepngtools-3" width="48" height="48"/>
         <image name="output-onlinepngtools-6" width="24" height="24"/>
-        <image name="person" catalog="system" width="128" height="117"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

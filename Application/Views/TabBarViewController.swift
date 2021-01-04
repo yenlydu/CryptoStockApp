@@ -13,6 +13,7 @@ class TabBarViewController: UITabBarController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         presenter.setTitle()
+        UserDefaults.standard.set(false, forKey: "_UIConstraintBasedLayoutLogUnsatisfiable")
         let navController = viewControllers![1] as! UINavigationController
         let vc = navController.topViewController as! ProfileViewController
         vc.jsonArray = presenter.getJsonArray()

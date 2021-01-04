@@ -1,12 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "108403_plain-blue-backgrounds-wallpapers_1920x1080_h.jpg",
+      "filename" : "icons8-name-35.png",
       "idiom" : "universal"
     }
   ],
   "info" : {
     "author" : "xcode",
     "version" : 1
+  },
+  "properties" : {
+    "template-rendering-intent" : "original"
   }
 }

@@ -150,15 +150,15 @@ extension CalculatorViewController : CalculatorView {
 //        let enDateString = dateFormat().enDateFormatter
 
         if storyboardId == "Buy" {
-            wallet![cellClicked]! += Double(amount)
-            bought![cellClicked] = frFormatter.string(from: Date()) + "|" + enFormatter.string(from: Date())
+            wallet?[cellClicked]! += Double(amount)
+            bought?[cellClicked] = frFormatter.string(from: Date()) + "|" + enFormatter.string(from: Date())
             print ("format", frFormatter.string(from: Date()) + "|" + enFormatter.string(from: Date()))
             _ = saveObject(fileName: "transactionBoughtDate", object: bought!)
             _ = saveObject(fileName: "myWallet", object: wallet!)
             
         } else if storyboardId == "Sell" {
-            wallet![cellClicked]! -= Double(amount)
-            sold![cellClicked] = frFormatter.string(from: Date()) + "|" + enFormatter.string(from: Date())
+            wallet?[cellClicked]! -= Double(amount)
+            sold?[cellClicked] = frFormatter.string(from: Date()) + "|" + enFormatter.string(from: Date())
             _ = saveObject(fileName: "myWallet", object: wallet!)
             _ = saveObject(fileName: "transactionSoldDate", object: sold!)
         }

@@ -19,10 +19,26 @@ class WalletBoughtViewController: UIViewController, CachingData {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         presenter.labelSetText()
+        presenter.setStyle(label: label)
+        presenter.setStyle(label: lastSoldUpdate)
+        presenter.setStyle(label: lastBoughtUpdate)
     }
 }
 
 extension WalletBoughtViewController : WalletView {
+    func setStyle(label: UILabel) {
+        label.backgroundColor = .clear
+        label.layer.cornerRadius = 15
+        label.layer.borderWidth = 3.0
+        label.layer.borderWidth = 2
+        label.layer.borderColor = UIColor(red: 66/255, green: 163/255, blue: 241/255, alpha: 1).cgColor
+        label.layer.shadowColor = UIColor.darkGray.cgColor
+        label.layer.shadowRadius = 3.0
+        label.layer.shadowOpacity = 1.0
+        label.layer.shadowOffset = CGSize(width: 4, height: 4)
+        label.layer.masksToBounds = false
+    }
+
     func labelSetText(tokenBought: [String], tokenSold: [String]) {
         let amount = "Amount".localizableString(str: UserDefaults.standard.string(forKey: "Languages")!)
         let currency = UserDefaults.standard.string(forKey: "Currency")!

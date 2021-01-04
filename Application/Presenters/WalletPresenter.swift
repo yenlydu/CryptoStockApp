@@ -27,11 +27,15 @@ class WalletPresenter {
         let tokenSold = setDateSold()
         view?.labelSetText(tokenBought: tokenBought, tokenSold: tokenSold)
     }
+    func setStyle(label: UILabel) {
+        view?.setStyle(label: label)
+    }
 }
 
 protocol WalletView : class {
     func labelSetText(tokenBought: [String], tokenSold: [String])
     func setDateBought() -> [String]
     func setDateSold() -> [String]
+    func setStyle(label: UILabel)
 }
 
