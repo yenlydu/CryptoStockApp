@@ -4,225 +4,177 @@
             "name" : "Bitcoin",
             "symbol" : "BTC",
             "icon" : "bitcoin.png",
-            "prices": [
-                {
-                    "euro" : 15692.15,
-                    "usd" : 19035.90
-                }
-            ],
-            "variationsPercentage": [
-                {
-                    "oneDay" :  0.18,
-                    "oneWeek" : 5.24
-                }
-            ],
-            "variationsLastWeek": [
-                {
-                    "monday" : 14969.37,
-                    "tuesday" : 16040.30,
-                    "wednesday" : 15583.11,
-                    "thursday" : 15570.82,
-                    "friday" : 16079.06,
-                    "saturday" : 15457.32,
-                    "sunday" : 15694.63
-                }
-            ]
+            "prices": {
+                "euro" : 15692.15,
+                "usd" : 19035.90
+            },
+            "variationsPercentage": {
+                "oneDay" :  0.18,
+                "oneWeek" : 5.24
+            },
+            "variationsLastWeek": {
+                "monday" : 14969.37,
+                "tuesday" : 16040.30,
+                "wednesday" : 15583.11,
+                "thursday" : 15570.82,
+                "friday" : 16079.06,
+                "saturday" : 15457.32,
+                "sunday" : 15694.63
+            }
         },
         {
             "name": "Ethereum",
             "symbol" : "ETH",
             "icon" : "ethereum.png",
-            "prices": [
-                {
-                    "euro" : 486.63,
-                    "usd" : 589.94
-                }
-            ],
-            "variationsPercentage": [
-                {
-                    "oneDay" : -0.03,
-                    "oneWeek" : 7.19
-                }
-            ],
-            "variationsLastWeek": [
-                {
-                    "monday" : 472.24,
-                    "tuesday" : 503.15,
-                    "wednesday" : 485.56,
-                    "thursday" : 493.21,
-                    "friday" : 509.29,
-                    "saturday" : 473.23,
-                    "sunday" : 488.25
-                }
-            ]
+            "prices": {
+                "euro" : 486.63,
+                "usd" : 589.94
+            },
+            "variationsPercentage": {
+                "oneDay" : -0.03,
+                "oneWeek" : 7.19
+            },
+            "variationsLastWeek": {
+                "monday" : 472.24,
+                "tuesday" : 503.15,
+                "wednesday" : 485.56,
+                "thursday" : 493.21,
+                "friday" : 509.29,
+                "saturday" : 473.23,
+                "sunday" : 488.25
+            }
         },
         {
             "name": "Litecoin",
             "symbol" : "LTC",
             "icon" : "litecoin.png",
-            "prices": [
-                {
-                    "euro" : 67.52,
-                    "usd" : 81.85
-                }
-            ],
-            "variationsPercentage": [
-                {
-                    "oneDay" : -1.25,
-                    "oneWeek" : 9.24
-                }
-            ],
-            "variationsLastWeek": [
-                {
-                    "monday" : 65.85,
-                    "tuesday" : 72.43,
-                    "wednesday" : 71.09,
-                    "thursday" : 73.24,
-                    "friday" : 73.38,
-                    "saturday" : 65.48,
-                    "sunday" : 67.70
-                }
-            ]
+            "prices": {
+                "euro" : 67.52,
+                "usd" : 81.85
+            },
+            "variationsPercentage": {
+                "oneDay" : -1.25,
+                "oneWeek" : 9.24
+            },
+            "variationsLastWeek": {
+                "monday" : 65.85,
+                "tuesday" : 72.43,
+                "wednesday" : 71.09,
+                "thursday" : 73.24,
+                "friday" : 73.38,
+                "saturday" : 65.48,
+                "sunday" : 67.70
+            }
         },
         {
             "name": "Tether",
             "symbol" : "USTD",
             "icon" : "tether.png",
-            "prices": [
-                {
-                    "euro" : 0.825594,
-                    "usd" : 1.00
-                }
-            ],
-            "variationsPercentage": [
-                {
-                    "oneDay" : -0.04,
-                    "oneWeek" : 0.06
-                }
-            ],
-            "variationsLastWeek": [
-                {
-                    "monday" : 0.825532,
-                    "tuesday" : 0.825044,
-                    "wednesday" : 0.826027,
-                    "thursday" : 0.825445,
-                    "friday" : 0.825558,
-                    "saturday" : 0.825102,
-                    "sunday" : 0.825248
-                }
-            ]
+            "prices": {
+                "euro" : 0.825594,
+                "usd" : 1.00
+            },
+            "variationsPercentage": {
+                "oneDay" : -0.04,
+                "oneWeek" : 0.06
+            },
+            "variationsLastWeek": {
+                "monday" : 0.825532,
+                "tuesday" : 0.825044,
+                "wednesday" : 0.826027,
+                "thursday" : 0.825445,
+                "friday" : 0.825558,
+                "saturday" : 0.825102,
+                "sunday" : 0.825248
+            }
         },
         {
             "name": "Chainlink",
             "symbol" : "LINK",
             "icon" : "chainlink.png",
-            "prices": [
-                {
-                    "euro" : 10.62,
-                    "usd" : 12.87
-                }
-            ],
-            "variationsPercentage": [
-                {
-                    "oneDay" : -2.31,
-                    "oneWeek" : -1.83
-                }
-            ],
-            "variationsLastWeek": [
-                {
-                    "monday" : 10.88,
-                    "tuesday" : 11.67,
-                    "wednesday" : 11.12,
-                    "thursday" : 11.61,
-                    "friday" : 11.53,
-                    "saturday" : 10.52,
-                    "sunday" : 10.83
-                }
-            ]
+            "prices": {
+                "euro" : 10.62,
+                "usd" : 12.87
+            },
+            "variationsPercentage": {
+                "oneDay" : -2.31,
+                "oneWeek" : -1.83
+            },
+            "variationsLastWeek": {
+                "monday" : 10.88,
+                "tuesday" : 11.67,
+                "wednesday" : 11.12,
+                "thursday" : 11.61,
+                "friday" : 11.53,
+                "saturday" : 10.52,
+                "sunday" : 10.83
+            }
         },
         {
             "name": "Bitcoin Cash",
             "symbol" : "BTH",
             "icon" : "bitcoin_cash.png",
-            "prices": [
-                {
-                    "euro" : 241.82,
-                    "usd" : 292.94
-                }
-            ],
-            "variationsPercentage": [
-                {
-                    "oneDay" : -0.73,
-                    "oneWeek" : -9.88
-                }
-            ],
-            "variationsLastWeek": [
-                {
-                    "monday" : 232.31,
-                    "tuesday" : 263.87,
-                    "wednesday" : 238.28,
-                    "thursday" : 241.60,
-                    "friday" : 249.28,
-                    "saturday" : 229.99,
-                    "sunday" : 233.72
-                }
-            ]
+            "prices": {
+                "euro" : 241.82,
+                "usd" : 292.94
+            },
+            "variationsPercentage": {
+                "oneDay" : -0.73,
+                "oneWeek" : -9.88
+            },
+            "variationsLastWeek": {
+                "monday" : 232.31,
+                "tuesday" : 263.87,
+                "wednesday" : 238.28,
+                "thursday" : 241.60,
+                "friday" : 249.28,
+                "saturday" : 229.99,
+                "sunday" : 233.72
+            }
         },
         {
             "name": "Polkadot",
             "symbol" : "DOT",
             "icon" : "polkadot.png",
-            "prices": [
-                {
-                    "euro" : 4.56,
-                    "usd" : 5.52
-                }
-            ],
-            "variationsPercentage": [
-                {
-                    "oneDay" : 5.65,
-                    "oneWeek" : 3.32
-                }
-            ],
-            "variationsLastWeek": [
-                {
-                    "monday" : 4.26,
-                    "tuesday" : 4.43,
-                    "wednesday" : 4.24,
-                    "thursday" : 4.53,
-                    "friday" : 4.47,
-                    "saturday" : 4.10,
-                    "sunday" : 4.23
-                }
-            ]
+            "prices": {
+                "euro" : 4.56,
+                "usd" : 5.52
+            },
+            "variationsPercentage": {
+                "oneDay" : 5.65,
+                "oneWeek" : 3.32
+            },
+            "variationsLastWeek": {
+                "monday" : 4.26,
+                "tuesday" : 4.43,
+                "wednesday" : 4.24,
+                "thursday" : 4.53,
+                "friday" : 4.47,
+                "saturday" : 4.10,
+                "sunday" : 4.23
+            }
         },
         {
             "name": "Binance Coin",
             "symbol" : "BNB",
             "icon" : "binance_coin.png",
-            "prices": [
-                {
-                    "euro" : 25.10,
-                    "usd" : 30.40
-                }
-            ],
-            "variationsPercentage": [
-                {
-                    "oneDay" : -0.84,
-                    "oneWeek" : -5.32
-                }
-            ],
-            "variationsLastWeek": [
-                {
-                    "monday" : 24.87,
-                    "tuesday" : 25.88,
-                    "wednesday" : 24.92,
-                    "thursday" : 24.97,
-                    "friday" : 25.28,
-                    "saturday" : 23.92,
-                    "sunday" : 24.34
-                }
-            ]
+            "prices": {
+                "euro" : 25.10,
+                "usd" : 30.40
+            },
+            "variationsPercentage": {
+                "oneDay" : -0.84,
+                "oneWeek" : -5.32
+            },
+            "variationsLastWeek": {
+                "monday" : 24.87,
+                "tuesday" : 25.88,
+                "wednesday" : 24.92,
+                "thursday" : 24.97,
+                "friday" : 25.28,
+                "saturday" : 23.92,
+                "sunday" : 24.34
+            }          
         }
     ]
 }

@@ -9,7 +9,10 @@ import Foundation
 
 
 extension String {
-    func localized() -> String {
-        return NSLocalizedString(self, tableName: "Localizable", bundle: .main, value: "**\(self)**", comment: "")
+    func localizableString(str: String) -> String {
+        guard let path = Bundle.main.path(forResource: str, ofType: "lproj"), let bundle = Bundle(path: path) else {
+            fatalError("File not found")
+       }
+       return NSLocalizedString(self, tableName: nil, bundle: bundle, value: "", comment: "")
     }
 }

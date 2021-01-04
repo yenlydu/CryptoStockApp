@@ -8,20 +8,14 @@
 import UIKit
 
 class TabBarViewController: UITabBarController {
+    @IBOutlet weak var tabbar: UITabBar!
+    private lazy var presenter = TabBarPresenter(with: self)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        presenter.setTitle()
+        let navController = viewControllers![1] as! UINavigationController
+        let vc = navController.topViewController as! ProfileViewController
+        vc.jsonArray = presenter.getJsonArray()
 
-
-    @IBOutlet private weak var tabbar: UITabBar!
-    var tabBarName : [String] = ["TabBarController.Home", "TabBarController.Prices", "TabBarController.Profile"]
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        title = "welcomeTitle".localized()
-        print("welcomeTitle".localized())
-        tabbar.items?.enumerated().forEach {
-            index, item in
-            item.title = tabBarName[index].localized()
-            print(item.title!)
-        }
     }
-
 }
