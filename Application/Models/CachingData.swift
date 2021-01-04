@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import os
 protocol CachingData {
     func saveObject(fileName: String, object: Any) -> Bool
     func getObject(fileName: String) -> Any?
@@ -20,36 +20,34 @@ extension CachingData {
         if exists {
             do {
                 try FileManager.default.removeItem(atPath: path)
-            }catch let error as NSError {
+            } catch {
                 return false
             }
         }
         return exists
     }
     func saveObject(fileName: String, object: Any) -> Bool {
-        let filePath = self.getDirectoryPath().appendingPathComponent(fileName)//1
+        let filePath = getDirectoryPath().appendingPathComponent(fileName)
+        os_log("Object saved at : \(filePath)")
         do {
-            let data = try NSKeyedArchiver.archivedData(withRootObject: object, requiringSecureCoding: false)//2
+            let data = try NSKeyedArchiver.archivedData(withRootObject: object, requiringSecureCoding: false)
             try data.write(to: filePath)//3
             return true
-        } catch {
-            print("error is: \(error.localizedDescription)")//4
+        } catch let error as NSError {
+            os_log("Error \(error)")
+            return false
         }
-        return false
     }
 
     func getObject(fileName: String) -> Any? {
-        let filePath = self.getDirectoryPath().appendingPathComponent(fileName)//5
-        print(filePath)
-
+        let filePath = getDirectoryPath().appendingPathComponent(fileName)
         do {
             let data = try Data(contentsOf: filePath)//6
-            let object = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data)//7
+            let object = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data)
             return object
         } catch {
-            print("error is: \(error.localizedDescription)")//9
+            return nil
         }
-        return nil
     }
     
     func getDirectoryPath() -> URL {

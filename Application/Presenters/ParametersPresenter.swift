@@ -9,25 +9,24 @@ import Foundation
 import UIKit
 
 class ParametersPresenter {
-    var view: ParametersView?
+    private weak var view: ParametersView?
     
     init(with view : ParametersView) {
         self.view = view
     }
-    
+
     func setLabels() {
-        self.view?.setLabels()
+        view?.setLabels()
     }
-    
 }
 
-protocol ParametersView : AnyObject{
+protocol ParametersView : class {
     func setLabels()
 }
 
 extension ParametersViewController: ParametersView {
     func setLabels() {
-        labelCountry.text = "Country".localizableString(str: UserDefaults.standard.string(forKey: "Languages")!)
-        labelCurrency.text = "ChangeCurrency".localizableString(str: UserDefaults.standard.string(forKey: "Languages")!)
+        labelCountry.text = "Country".localizableString(str: UserDefaults.standard.string(forKey: "Languages") ?? "Country")
+        labelCurrency.text = "ChangeCurrency".localizableString(str: UserDefaults.standard.string(forKey: "Languages") ?? "Currency")
     }
 }

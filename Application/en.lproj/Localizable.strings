@@ -21,6 +21,8 @@
 "TabBarController.Profile" = "Profile";
 "TabBarController.Home" = "Home";
 "Currency" = "$";
+"Sale" = "Sale";
+"Purchase" = "Purchase";
 "VariationsLastWeek" = "Variations during last week :";
 "VariationsLastDay" = "Variations during last day :";
 "Buy" = "Buy";

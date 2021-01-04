@@ -19,7 +19,9 @@
 "TabBarController.Home" = "huis";
 "Currency" = "€";
 "Amount" = "bedrag";
+"Purchase" = "Aankoop";
 "Never" = "Nooit";
+"Sale" = "Uitverkoop";
 "Variations" = "Variaties in ";
 "DateFormat" = "dd/MM/yyyy HH:mm:ss";
 "About" = "Over";

@@ -8,35 +8,54 @@
 import UIKit
 
 class CalculatorViewController: UIViewController, CachingData {
-    @IBOutlet weak  var amountTextField: UILabel!
-    @IBOutlet var devise: UILabel!
-    @IBOutlet var sellTitle: UITextField!
-    @IBOutlet var buyTitle: UITextField!
-    lazy var presenter = CalculatorPresenter(with: self)
-    var storyboardId: String = ""
-    var cryptoName: String = ""
-    @IBOutlet var buttonsCalculator: [UIButton]!
-    
+    @IBOutlet private weak var amountTextField: UILabel!
+    @IBOutlet private var devise: UILabel!
+    @IBOutlet private var sellTitle: UITextField!
+    @IBOutlet private var buyTitle: UITextField!
+    private var storyboardId: String = ""
+    private lazy var presenter = CalculatorPresenter(with: self)
+    var cellClicked: String = ""
+    var frFormatter = DateFormatter()
+    var enFormatter = DateFormatter()
+
+    @IBOutlet var purchase: UIBarButtonItem!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         amountTextField.text = ""
-        self.presenter.changeAppearance()
-        devise.text = "Currency".localizableString(str: UserDefaults.standard.string(forKey: "Languages")!)
+        presenter.changeAppearance()
+        presenter.purchaseSaleButton()
+//        print ("prufr ", "Purchase".localizableString(str: UserDefaults.standard.string(forKey: "Languages")!))
+    }
+
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        (frFormatter, enFormatter) = dateFormat()
+    }
+
+    private func dateFormat() -> (frDateFormatter: DateFormatter, enDateFormatter: DateFormatter) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy, HH:mm:ss"
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "en_US_POSIX")
+        formatter.dateFormat = "MM/dd/yyyy, h:mm a"
+        formatter.amSymbol = "AM"
+        formatter.pmSymbol = "PM"
+        return (dateFormatter, formatter)
     }
 
     @IBAction func doneButton(_ sender: Any) {
-        self.presenter.changeWalletAmount(amount: amountTextField.text!)
+        presenter.changeWalletAmount(amount: amountTextField.text!)
         self.dismiss(animated: true, completion: nil)
     }
 
     @IBAction func buttonRm(_ sender: Any) {
-        let string = self.amountTextField.text?.dropLast()
-        self.amountTextField.text = String(string!)
+        let string = amountTextField.text?.dropLast()
+        amountTextField.text = String(string!)
     }
 
     @IBAction func button0(_ sender: Any) {
         amountTextField.text = amountTextField.text! + "0"
-        
     }
 
     @IBAction func buttonDot(_ sender: Any) {
@@ -77,5 +96,71 @@ class CalculatorViewController: UIViewController, CachingData {
 
     @IBAction func button1(_ sender: Any) {
         amountTextField.text = amountTextField.text! + "1"
+    }
+}
+
+
+extension CalculatorViewController : CalculatorView {
+    func setStoryboardId() {
+        storyboardId = restorationIdentifier!
+        setTitle()
+    }
+
+    func setTitle() {
+        devise.text = UserDefaults.standard.string(forKey: "Currency") ?? ""
+        if (storyboardId == "Buy") {
+            buyTitle.text = "Buy".localizableString(str: UserDefaults.standard.string(forKey: "Languages") ?? "Buy")
+            buyTitle.backgroundColor = .lightGray
+        } else if (storyboardId == "Sell") {
+            sellTitle.text = "Sell".localizableString(str: UserDefaults.standard.string(forKey: "Languages") ?? "Sell")
+            sellTitle.backgroundColor = .lightGray
+        }
+    }
+    
+    func setPurchaseName() {
+        
+    }
+    
+    func purchaseSaleButton() {
+        if (storyboardId == "Buy") {
+            purchase.title = "Purchase".localizableString(str: UserDefaults.standard.string(forKey: "Languages")!)
+        } else if (storyboardId == "Sell") {
+            purchase.title = "Sale".localizableString(str: UserDefaults.standard.string(forKey: "Languages")!)
+
+        }
+    }
+
+    func changeAppearance() {
+        let myColor = UIColor.blue
+        amountTextField.isUserInteractionEnabled = false
+        amountTextField.layer.cornerRadius = 5.0
+        amountTextField.layer.borderColor = myColor.cgColor
+        amountTextField.layer.borderColor = view.tintColor.cgColor
+        amountTextField.layer.borderWidth = 1.0
+        amountTextField.textColor = .black
+    }
+
+
+    func changeWalletAmount(amount: Double) {
+        var wallet = getObject(fileName: "myWallet") as? Dictionary<String, Double>
+        var bought = getObject(fileName: "transactionBoughtDate") as? Dictionary<String, String>
+        var sold = getObject(fileName: "transactionSoldDate") as? Dictionary<String, String>
+    
+//        let frDateFormatter = dateFormat().frDateFormatter
+//        let enDateString = dateFormat().enDateFormatter
+
+        if storyboardId == "Buy" {
+            wallet![cellClicked]! += Double(amount)
+            bought![cellClicked] = frFormatter.string(from: Date()) + "|" + enFormatter.string(from: Date())
+            print ("format", frFormatter.string(from: Date()) + "|" + enFormatter.string(from: Date()))
+            _ = saveObject(fileName: "transactionBoughtDate", object: bought!)
+            _ = saveObject(fileName: "myWallet", object: wallet!)
+            
+        } else if storyboardId == "Sell" {
+            wallet![cellClicked]! -= Double(amount)
+            sold![cellClicked] = frFormatter.string(from: Date()) + "|" + enFormatter.string(from: Date())
+            _ = saveObject(fileName: "myWallet", object: wallet!)
+            _ = saveObject(fileName: "transactionSoldDate", object: sold!)
+        }
     }
 }

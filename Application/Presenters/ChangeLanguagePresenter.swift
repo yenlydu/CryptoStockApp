@@ -9,47 +9,34 @@ import Foundation
 import UIKit
 
 class LanguagePresenter {
+    private weak var view: ChangeLanguagePresenterView?
+    private var dataArray: Array<String> = []
+    private var defaultKey : String = "fr"
 
-    weak var view: ChangeLanguagePresenterView?
-    @IBOutlet var parametersView: UIPickerView!
-    var dataArray: Array<String> = []
-    var key : String = "Languages"
-    var defaultKey : String = "fr"
     init(with view : ChangeLanguagePresenterView) {
         self.view = view
     }
-    
+
     func getDefaultLanguage() -> String {
-        return self.defaultKey
+        return defaultKey
     }
-    
-    func getKey() -> String {
-        return self.key
-    }
-    
-    private func splitLanguageLocalized() {
-        dataArray.append("French".localizableString(str: UserDefaults.standard.string(forKey: "Languages")!))
-        dataArray.append("English".localizableString(str: UserDefaults.standard.string(forKey: "Languages")!))
-        dataArray.append("Dutch".localizableString(str: UserDefaults.standard.string(forKey: "Languages")!))
+
+    func splitLanguageLocalized() {
+        dataArray.append("French".localizableString(str: UserDefaults.standard.string(forKey: "Languages") ?? "French"))
+        dataArray.append("English".localizableString(str: UserDefaults.standard.string(forKey: "Languages") ?? "English"))
+        dataArray.append("Dutch".localizableString(str: UserDefaults.standard.string(forKey: "Languages") ?? "Dutch"))
     }
 
     func getLanguages() -> Array<String> {
-        return self.dataArray
-    }
-    
-    func displayLanguage () {
-        splitLanguageLocalized()
+        return dataArray
     }
 
-}
-
-protocol ChangeLanguagePresenterView: AnyObject {
-    func splitLanguageLocalized()
-}
-
-extension ChangeLanguageViewController: ChangeLanguagePresenterView {
-    func splitLanguageLocalized() {
-        
+    func display () {
+        view?.buttonAppearance()
     }
-
 }
+
+protocol ChangeLanguagePresenterView: class {
+    func buttonAppearance()
+}
+
