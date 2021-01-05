@@ -103,7 +103,6 @@ extension CryptoInformationsViewController : CryptocurrencyView {
     func setPriceVariations() {
         jsonArray[getCellClickedPosition()!].variationsPercentage.oneDay < 0 ? setRed(price: priceOneDay) : setGreen(price: priceOneDay)
         jsonArray[getCellClickedPosition()!].variationsPercentage.oneWeek < 0 ? setRed(price: priceOneWeek) : setGreen(price: priceOneWeek)
-        print("percent ", jsonArray[getCellClickedPosition()!].variationsPercentage.oneWeek)
         priceOneDay.text = String(jsonArray[getCellClickedPosition()!].variationsPercentage.oneDay) + "%"
         priceOneWeek.text = String(jsonArray[getCellClickedPosition()!].variationsPercentage.oneWeek) + "%"
     }

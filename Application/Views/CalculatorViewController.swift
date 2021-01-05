@@ -25,7 +25,6 @@ class CalculatorViewController: UIViewController, CachingData {
         amountTextField.text = ""
         presenter.changeAppearance()
         presenter.purchaseSaleButton()
-//        print ("prufr ", "Purchase".localizableString(str: UserDefaults.standard.string(forKey: "Languages")!))
     }
 
     required init?(coder: NSCoder) {
@@ -152,7 +151,6 @@ extension CalculatorViewController : CalculatorView {
         if storyboardId == "Buy" {
             wallet?[cellClicked]! += Double(amount)
             bought?[cellClicked] = frFormatter.string(from: Date()) + "|" + enFormatter.string(from: Date())
-            print ("format", frFormatter.string(from: Date()) + "|" + enFormatter.string(from: Date()))
             _ = saveObject(fileName: "transactionBoughtDate", object: bought!)
             _ = saveObject(fileName: "myWallet", object: wallet!)
             

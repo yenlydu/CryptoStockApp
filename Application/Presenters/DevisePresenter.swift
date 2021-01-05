@@ -14,6 +14,10 @@ class DevisePresenter {
         self.view = view
     }
 
+    func setText() {
+        view?.setText()
+    }
+    
     func setDataDevises() {
         view?.setDataDevises()
     }
@@ -25,5 +29,6 @@ class DevisePresenter {
 
 protocol DeviseView {
     func setDataDevises()
+    func setText()
     func doChangeDeviseButtonAction()
 }

@@ -32,11 +32,13 @@ class LanguagePresenter {
     }
 
     func display () {
+        view?.setText()
         view?.buttonAppearance()
     }
 }
 
 protocol ChangeLanguagePresenterView: class {
     func buttonAppearance()
+    func setText()
 }
 

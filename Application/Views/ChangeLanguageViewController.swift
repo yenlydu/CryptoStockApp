@@ -53,5 +53,8 @@ extension ChangeLanguageViewController: ChangeLanguagePresenterView {
         buttonSetLanguage.layer.borderWidth = 1
         buttonSetLanguage.layer.borderColor = UIColor.black.cgColor
     }
-
+    
+    func setText() {
+        buttonSetLanguage.setTitle("ChangeLanguage".localizableString(str: UserDefaults.standard.string(forKey: "Languages") ?? "Change language"), for: .normal)
+    }
 }

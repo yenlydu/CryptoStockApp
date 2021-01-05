@@ -18,15 +18,24 @@ class DeviseViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         super.viewDidLoad()
         devisePickerView.delegate = self
         devisePickerView.dataSource = self
+        presenter.setText()
         presenter.setDataDevises()
+        buttonAppearance()
+        
     }
-
+    func buttonAppearance() {
+        changeDevise.backgroundColor = .clear
+        changeDevise.layer.cornerRadius = 5
+        changeDevise.layer.borderWidth = 1
+        changeDevise.layer.borderColor = UIColor.black.cgColor
+    }
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
 
     @IBAction func changeDeviseButton(_ sender: Any) {
         presenter.doChangeDeviseButtonAction()
+        view.window?.rootViewController?.dismiss(animated: true, completion: nil)
     }
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
@@ -48,10 +57,12 @@ extension DeviseViewController : DeviseView {
         dataArray.append("€")
     }
 
+    func setText() {
+        changeDevise.setTitle("ChangeCurrency".localizableString(str: UserDefaults.standard.string(forKey: "Languages") ?? "Change currency"), for: .normal)
+    }
+    
     func doChangeDeviseButtonAction() {
-        UIView.appearance().semanticContentAttribute = .forceLeftToRight
-        navigationController?.popToRootViewController(animated: true)
         UserDefaults.standard.set(devise.isEmpty ? "$" : devise, forKey: "Currency")
-        view.window!.rootViewController?.dismiss(animated: false, completion: nil)
+        UIView.appearance().semanticContentAttribute = .forceLeftToRight
     }
 }

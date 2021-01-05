@@ -10,8 +10,7 @@
 "French" = "Frans,fr";
 "English" = "Engels,en";
 "Dutch" = "Nederlands,nl";
-"ChangeCurrency" = "Munteenheid";
-"Country" = "Land";
+"Country" = "Taal";
 "Parameters" = "Instellingen";
 "Welcome" = "Welkom !";
 "TabBarController.Prices" = "Prijzen";
@@ -20,11 +19,14 @@
 "Currency" = "€";
 "Amount" = "bedrag";
 "Purchase" = "Aankoop";
+"ChangeDevisePicker" = "Valuta";
+"ChangeCurrency" = "Valutawissel";
 "Never" = "Nooit";
 "Sale" = "Uitverkoop";
 "Variations" = "Variaties in ";
 "DateFormat" = "dd/MM/yyyy HH:mm:ss";
 "About" = "Over";
+"ChangeLanguage" = "Van taal veranderen";
 "Buy" = "Kopen";
 "VariationsLastWeek" = "
 Variaties tijdens de afgelopen week :";

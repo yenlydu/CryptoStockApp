@@ -10,8 +10,7 @@
 "French" = "French,fr";
 "English" = "English,en";
 "Dutch" = "Dutch,nl";
-"ChangeCurrency" = "Currency";
-"Country" = "Country";
+"Country" = "Language";
 "Parameters" = "Parameters";
 "Welcome" = "Welcome !";
 "Variations" = "Variations in ";
@@ -21,8 +20,11 @@
 "TabBarController.Profile" = "Profile";
 "TabBarController.Home" = "Home";
 "Currency" = "$";
+"ChangeCurrency" = "Change currency";
+"ChangeLanguage" = "Change language";
 "Sale" = "Sale";
 "Purchase" = "Purchase";
+"ChangeCurrencyPicker" = "Currency";
 "VariationsLastWeek" = "Variations during last week :";
 "VariationsLastDay" = "Variations during last day :";
 "Buy" = "Buy";
