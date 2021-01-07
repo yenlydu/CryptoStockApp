@@ -17,6 +17,5 @@ class ParametersViewController : UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         presenter.setLabels()
-
     }
 }

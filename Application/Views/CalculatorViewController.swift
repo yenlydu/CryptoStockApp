@@ -98,7 +98,6 @@ class CalculatorViewController: UIViewController, CachingData {
     }
 }
 
-
 extension CalculatorViewController : CalculatorView {
     func setStoryboardId() {
         storyboardId = restorationIdentifier!
@@ -115,17 +114,12 @@ extension CalculatorViewController : CalculatorView {
             sellTitle.backgroundColor = .lightGray
         }
     }
-    
-    func setPurchaseName() {
-        
-    }
-    
+
     func purchaseSaleButton() {
         if (storyboardId == "Buy") {
             purchase.title = "Purchase".localizableString(str: UserDefaults.standard.string(forKey: "Languages")!)
         } else if (storyboardId == "Sell") {
             purchase.title = "Sale".localizableString(str: UserDefaults.standard.string(forKey: "Languages")!)
-
         }
     }
 
@@ -139,21 +133,15 @@ extension CalculatorViewController : CalculatorView {
         amountTextField.textColor = .black
     }
 
-
     func changeWalletAmount(amount: Double) {
         var wallet = getObject(fileName: "myWallet") as? Dictionary<String, Double>
         var bought = getObject(fileName: "transactionBoughtDate") as? Dictionary<String, String>
         var sold = getObject(fileName: "transactionSoldDate") as? Dictionary<String, String>
-    
-//        let frDateFormatter = dateFormat().frDateFormatter
-//        let enDateString = dateFormat().enDateFormatter
-
         if storyboardId == "Buy" {
             wallet?[cellClicked]! += Double(amount)
             bought?[cellClicked] = frFormatter.string(from: Date()) + "|" + enFormatter.string(from: Date())
             _ = saveObject(fileName: "transactionBoughtDate", object: bought!)
             _ = saveObject(fileName: "myWallet", object: wallet!)
-            
         } else if storyboardId == "Sell" {
             wallet?[cellClicked]! -= Double(amount)
             sold?[cellClicked] = frFormatter.string(from: Date()) + "|" + enFormatter.string(from: Date())

@@ -10,7 +10,7 @@ import UIKit
 
 class MoneyPresenter : CachingData {
     private var json = JSONParser()
-    private var view : MoneyView?
+    private weak var view : MoneyView?
     private var jsonArray : [Cryptocurrency] = []
 
     init(with view: MoneyView) {
@@ -37,7 +37,8 @@ class MoneyPresenter : CachingData {
         view?.tableViewLayout()
     }
 }
-protocol MoneyView {
+
+protocol MoneyView : class {
     func setTitle()
     func tableViewLayout()
 }

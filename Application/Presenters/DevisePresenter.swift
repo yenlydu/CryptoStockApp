@@ -8,8 +8,8 @@
 import Foundation
 
 class DevisePresenter {
-    var view : DeviseView?
-    
+    private weak var view : DeviseView?
+
     init(with view: DeviseView) {
         self.view = view
     }
@@ -17,17 +17,17 @@ class DevisePresenter {
     func setText() {
         view?.setText()
     }
-    
+
     func setDataDevises() {
         view?.setDataDevises()
     }
-    
+
     func doChangeDeviseButtonAction() {
         view?.doChangeDeviseButtonAction()
     }
 }
 
-protocol DeviseView {
+protocol DeviseView : class {
     func setDataDevises()
     func setText()
     func doChangeDeviseButtonAction()

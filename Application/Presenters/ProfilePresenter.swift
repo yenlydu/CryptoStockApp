@@ -24,4 +24,3 @@ protocol ProfileView : class {
     func setLabelDisplay()
     func setBarChartBoughtDatas()
 }
-

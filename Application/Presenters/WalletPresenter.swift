@@ -10,11 +10,11 @@ import UIKit
 
 class WalletPresenter {
     private weak var view: WalletView?
-    
+
     init(with view: WalletView) {
         self.view = view
     }
-    
+
     func setDateBought() -> [String] {
         return (view?.setDateBought())!
     }
@@ -22,11 +22,13 @@ class WalletPresenter {
     func setDateSold() -> [String] {
         return (view?.setDateSold())!
     }
+
     func labelSetText() {
         let tokenBought = setDateBought()
         let tokenSold = setDateSold()
         view?.labelSetText(tokenBought: tokenBought, tokenSold: tokenSold)
     }
+
     func setStyle(label: UILabel) {
         view?.setStyle(label: label)
     }
@@ -38,4 +40,3 @@ protocol WalletView : class {
     func setDateSold() -> [String]
     func setStyle(label: UILabel)
 }
-

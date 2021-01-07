@@ -41,4 +41,3 @@ protocol ChangeLanguagePresenterView: class {
     func buttonAppearance()
     func setText()
 }
-

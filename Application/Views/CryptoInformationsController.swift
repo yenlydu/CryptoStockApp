@@ -65,7 +65,7 @@ extension CryptoInformationsViewController : CryptocurrencyView {
         entries.append(ChartDataEntry(x: 7, y: Double(variations!.sunday)))
         return entries
     }
-    
+
     func getCellClickedPosition() -> Int? {
         for i in 0..<jsonArray.count {
             if (cellClicked == jsonArray[i].name) {
@@ -81,7 +81,7 @@ extension CryptoInformationsViewController : CryptocurrencyView {
         setPriceVariations()
         setLabel(cellClickedName: cellClickedName)
     }
-    
+
     func setBitcoinAbout(cellClickedName: String) {
         let tempAboutCellClicked = "About" + "." + cellClickedName.replacingOccurrences(of: " ", with: "")
         bitcoinInformation.text = tempAboutCellClicked.localizableString(str: UserDefaults.standard.string(forKey: "Languages") ?? "Nil")
@@ -117,10 +117,9 @@ extension CryptoInformationsViewController : CryptocurrencyView {
         variationLastDay.text = "VariationsLastDay".localizableString(str: UserDefaults.standard.string(forKey: "Languages") ?? "Variations Last Day")
         variationsLastWeek.text = "VariationsLastWeek".localizableString(str: UserDefaults.standard.string(forKey: "Languages") ?? "Variations Last Week")
     }
+
     func setLabel(cellClickedName: String) {
         aboutLabel.font = UIFont.boldSystemFont(ofSize: 22.0)
-        aboutLabel.text = "About".localizableString(str: UserDefaults.standard.string(forKey: "Languages") ?? "About")
- + " " + cellClickedName
-
+        aboutLabel.text = "About".localizableString(str: UserDefaults.standard.string(forKey: "Languages") ?? "About") + " " + cellClickedName
     }
 }

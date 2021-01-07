@@ -23,12 +23,14 @@ class DeviseViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         buttonAppearance()
         
     }
+
     func buttonAppearance() {
         changeDevise.backgroundColor = .clear
         changeDevise.layer.cornerRadius = 5
         changeDevise.layer.borderWidth = 1
         changeDevise.layer.borderColor = UIColor.black.cgColor
     }
+
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -60,7 +62,7 @@ extension DeviseViewController : DeviseView {
     func setText() {
         changeDevise.setTitle("ChangeCurrency".localizableString(str: UserDefaults.standard.string(forKey: "Languages") ?? "Change currency"), for: .normal)
     }
-    
+
     func doChangeDeviseButtonAction() {
         UserDefaults.standard.set(devise.isEmpty ? "$" : devise, forKey: "Currency")
         UIView.appearance().semanticContentAttribute = .forceLeftToRight

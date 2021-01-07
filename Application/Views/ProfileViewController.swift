@@ -15,12 +15,11 @@ class ProfileViewController : UIViewController, CachingData, ChartViewDelegate {
     @IBOutlet private var barChartBought: BarChartView!
     private lazy var presenter = ProfilePresenter(with: self)
     var jsonArray : [Cryptocurrency] = []
-    
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         title = "TabBarController.Profile".localizableString(str: UserDefaults.standard.string(forKey: "Languages") ?? "Profile")
         presenter.display()
-
     }
 
     func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
@@ -69,7 +68,6 @@ extension ProfileViewController : ProfileView {
         barChartBought.center = view.center
         barChartBought.delegate = self
         barChartBought.xAxis.valueFormatter = IndexAxisValueFormatter(values: labelsBought)
-    
         let setBought = BarChartDataSet(entries: entriesBought, label: "test")
         let dataBought = BarChartData(dataSet: setBought)
         setBought.colors = ChartColorTemplates.joyful()
