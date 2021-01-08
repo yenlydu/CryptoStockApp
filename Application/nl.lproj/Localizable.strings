@@ -18,8 +18,9 @@
 "TabBarController.Home" = "huis";
 "Currency" = "€";
 "Amount" = "bedrag";
+"WalletContent" = "Portemonnee-inhoud";
 "Purchase" = "Aankoop";
-"ChangeDevisePicker" = "Valuta";
+"ChangeCurrencyPicker" = "Valuta";
 "ChangeCurrency" = "Valutawissel";
 "Never" = "Nooit";
 "Sale" = "Uitverkoop";

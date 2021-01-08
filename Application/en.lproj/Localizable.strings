@@ -23,6 +23,8 @@
 "ChangeCurrency" = "Change currency";
 "ChangeLanguage" = "Change language";
 "Sale" = "Sale";
+"WalletContent" = "Wallet content";
+
 "Purchase" = "Purchase";
 "ChangeCurrencyPicker" = "Currency";
 "VariationsLastWeek" = "Variations during last week :";

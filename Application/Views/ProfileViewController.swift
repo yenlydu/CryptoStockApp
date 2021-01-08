@@ -68,7 +68,7 @@ extension ProfileViewController : ProfileView {
         barChartBought.center = view.center
         barChartBought.delegate = self
         barChartBought.xAxis.valueFormatter = IndexAxisValueFormatter(values: labelsBought)
-        let setBought = BarChartDataSet(entries: entriesBought, label: "test")
+        let setBought = BarChartDataSet(entries: entriesBought, label: "WalletContent".localizableString(str: UserDefaults.standard.string(forKey: "Languages")!))
         let dataBought = BarChartData(dataSet: setBought)
         setBought.colors = ChartColorTemplates.joyful()
         barChartBought.data = dataBought

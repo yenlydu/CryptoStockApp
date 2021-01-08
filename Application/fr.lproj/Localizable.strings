@@ -27,6 +27,7 @@
 "TabBarController.Profile" = "Profil";
 "TabBarController.Home" = "Accueil";
 "Currency" = "€";
+"WalletContent" = "Contenu du portefeuille";
 "About" = "A propos de";
 "Never" = "Jamais";
 "Buy" = "Acheter";
