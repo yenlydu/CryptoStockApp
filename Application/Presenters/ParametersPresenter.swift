@@ -20,7 +20,7 @@ class ParametersPresenter {
     }
 }
 
-protocol ParametersView : class {
+protocol ParametersView : AnyObject {
     func setLabels()
 }
 

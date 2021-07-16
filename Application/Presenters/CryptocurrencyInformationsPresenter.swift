@@ -32,7 +32,7 @@ class CyptocurrencyInformationPresenter {
     }
 }
 
-protocol CryptocurrencyView : class {
+protocol CryptocurrencyView : AnyObject {
     func setInformations(cellClickedName: String)
     func getCellClickedPosition() -> Int?
     func getLineChartDatas() -> [ChartDataEntry]

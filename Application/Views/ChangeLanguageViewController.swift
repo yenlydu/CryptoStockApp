@@ -7,6 +7,7 @@
 
 import UIKit
 import Charts
+import Firebase
 
 class ChangeLanguageViewController : UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     @IBOutlet private var parametersView: UIPickerView!
@@ -27,6 +28,12 @@ class ChangeLanguageViewController : UIViewController, UIPickerViewDataSource, U
     }
 
     @IBAction func buttonChange(_ sender: Any) {
+        Analytics.logEvent(AnalyticsEventSelectContent, parameters: [
+          AnalyticsParameterItemID: AnalyticsEventSelectContent,
+          AnalyticsParameterItemName: "sold",
+          AnalyticsParameterContentType: "soldContent"
+        ])
+
         let str : String = selectedLanguage?[1] ?? presenter.getDefaultLanguage()
         UserDefaults.standard.set(str, forKey: "Languages")
         UIView.appearance().semanticContentAttribute = .forceLeftToRight

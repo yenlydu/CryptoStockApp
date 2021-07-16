@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		180467F52667F9B5004931E7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 180467F42667F9B5004931E7 /* GoogleService-Info.plist */; };
 		1850756E25766BCD00AD4E18 /* CryptoInformationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1850756D25766BCD00AD4E18 /* CryptoInformationsController.swift */; };
 		1855A8D3257107E500C508EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1855A8D2257107E500C508EC /* AppDelegate.swift */; };
 		1855A8D5257107E500C508EC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1855A8D4257107E500C508EC /* SceneDelegate.swift */; };
@@ -61,6 +62,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		180467F42667F9B5004931E7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1850756D25766BCD00AD4E18 /* CryptoInformationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoInformationsController.swift; sourceTree = "<group>"; };
 		1855A8CF257107E500C508EC /* IOSBasic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOSBasic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1855A8D2257107E500C508EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 		1855A8D1257107E500C508EC /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				180467F42667F9B5004931E7 /* GoogleService-Info.plist */,
 				1855A8D2257107E500C508EC /* AppDelegate.swift */,
 				1855A8D4257107E500C508EC /* SceneDelegate.swift */,
 				188BEA9A258B74C7003211D9 /* Storyboard */,
@@ -385,6 +388,7 @@
 			files = (
 				186D29BC257D436300512EA9 /* Localizable.strings in Resources */,
 				1867424F257438F600263972 /* prices.json in Resources */,
+				180467F52667F9B5004931E7 /* GoogleService-Info.plist in Resources */,
 				1855A8DC257107E700C508EC /* Assets.xcassets in Resources */,
 				1855A8DA257107E500C508EC /* Main.storyboard in Resources */,
 			);

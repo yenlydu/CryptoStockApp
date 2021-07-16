@@ -38,7 +38,7 @@ class MoneyPresenter : CachingData {
     }
 }
 
-protocol MoneyView : class {
+protocol MoneyView : AnyObject {
     func setTitle()
     func tableViewLayout()
 }

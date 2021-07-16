@@ -68,7 +68,7 @@ class TabBarPresenter : CachingData {
      }
 }
 
-protocol TabBarView : class {
+protocol TabBarView : AnyObject {
     func setTitle()
 }
 

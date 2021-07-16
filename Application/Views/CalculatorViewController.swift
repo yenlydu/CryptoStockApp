@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseFirestore
 
 class CalculatorViewController: UIViewController, CachingData {
     @IBOutlet private weak var amountTextField: UILabel!
@@ -19,12 +21,14 @@ class CalculatorViewController: UIViewController, CachingData {
     var enFormatter = DateFormatter()
 
     @IBOutlet var purchase: UIBarButtonItem!
-
+    private final var docRef: DocumentReference!
     override func viewDidLoad() {
         super.viewDidLoad()
+
         amountTextField.text = ""
         presenter.changeAppearance()
         presenter.purchaseSaleButton()
+        docRef = Firestore.firestore().collection("Users").document("SMUEBAmh3z0l5zHdQKk7");
     }
 
     required init?(coder: NSCoder) {
@@ -45,6 +49,12 @@ class CalculatorViewController: UIViewController, CachingData {
 
     @IBAction func doneButton(_ sender: Any) {
         presenter.changeWalletAmount(amount: amountTextField.text!)
+        Analytics.logEvent(AnalyticsEventPurchase, parameters: [
+          AnalyticsParameterItemID: AnalyticsEventLogin,
+          AnalyticsParameterItemName: "sold",
+          AnalyticsParameterContentType: "soldContent"
+        ])
+
         self.dismiss(animated: true, completion: nil)
     }
 
@@ -142,6 +152,7 @@ extension CalculatorViewController : CalculatorView {
             bought?[cellClicked] = frFormatter.string(from: Date()) + "|" + enFormatter.string(from: Date())
             _ = saveObject(fileName: "transactionBoughtDate", object: bought!)
             _ = saveObject(fileName: "myWallet", object: wallet!)
+
         } else if storyboardId == "Sell" {
             wallet?[cellClicked]! -= Double(amount)
             sold?[cellClicked] = frFormatter.string(from: Date()) + "|" + enFormatter.string(from: Date())

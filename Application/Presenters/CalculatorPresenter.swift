@@ -32,7 +32,7 @@ class CalculatorPresenter : CachingData{
     }
 }
 
-protocol CalculatorView : class {
+protocol CalculatorView : AnyObject {
     func changeAppearance()
     func changeWalletAmount(amount: Double)
     func setStoryboardId()

@@ -20,7 +20,7 @@ class ProfilePresenter {
     }
 }
 
-protocol ProfileView : class {
+protocol ProfileView : AnyObject {
     func setLabelDisplay()
     func setBarChartBoughtDatas()
 }

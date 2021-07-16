@@ -27,7 +27,7 @@ class DevisePresenter {
     }
 }
 
-protocol DeviseView : class {
+protocol DeviseView : AnyObject {
     func setDataDevises()
     func setText()
     func doChangeDeviseButtonAction()

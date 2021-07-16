@@ -37,7 +37,7 @@ class LanguagePresenter {
     }
 }
 
-protocol ChangeLanguagePresenterView: class {
+protocol ChangeLanguagePresenterView: AnyObject {
     func buttonAppearance()
     func setText()
 }

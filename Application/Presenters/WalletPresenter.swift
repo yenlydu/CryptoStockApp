@@ -34,7 +34,7 @@ class WalletPresenter {
     }
 }
 
-protocol WalletView : class {
+protocol WalletView : AnyObject {
     func labelSetText(tokenBought: [String], tokenSold: [String])
     func setDateBought() -> [String]
     func setDateSold() -> [String]
