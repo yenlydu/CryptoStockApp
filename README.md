@@ -7,8 +7,18 @@
 ## Project description
 
 - Crypto-currency portfolio application (basic operation such as sell/buy)
-- Profile page with the summary of the amount of crypto-currencies acquired by the user represented in the form of Charts
-- Localizing the app (french, english - US, dutch)
-- JSON format for the currencies
+
+### Price tab
+- List of cryptocurrencies(JSON format)
+- Display information of each cryptocurrencies (description, chart ...)
+- Buy/Sell
+
+### Profile tab
+- Summary of the amount of crypto-currencies acquired by the user
 - Updating datas according to the localization (for example, for the english - US the data format and device will be different)
-- Bonus : Firebase implementation (still in progress, will be use to avoid storing locally the user's amount of crypto-currencies he owns), language change intra application (passing from french to dutch without reloading the application), currency change intra application (passing from dollar), display currencies last sold/bought
+- Localizing the app (french, english - US, dutch)
+### Bonus
+- Firebase implementation (still in progress, will be use to avoid storing locally the user's amount of crypto-currencies he owns)
+- Language change intra application (passing from french to dutch without reloading the application)
+- Currency change intra application (passing from dollar)
+- Display on currency click the last time it has been sold/bought
